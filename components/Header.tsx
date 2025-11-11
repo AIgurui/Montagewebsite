@@ -31,7 +31,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <Link href="/marketing/contact" className="rounded-xl bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 focus-visible:shadow-focus">Contact</Link>
+        <a href="https://calendly.com/zakiullah-montageoil/30min" target="_blank" rel="noopener noreferrer" className="rounded-xl bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 focus-visible:shadow-focus">Start a Conversation</a>
       </div>
     </header>
   )

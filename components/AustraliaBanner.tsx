@@ -29,28 +29,15 @@ export default function AustraliaBanner() {
             </div>
 
             {/* CTA */}
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                href="/marketing/australia"
-                className="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-8 py-4 text-base font-bold text-neutral-900 hover:bg-yellow-300 transition-all hover:scale-105 shadow-xl"
-              >
-                <span>Explore Australia Program</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <a
-                href="https://calendly.com/zakiullah-montageoil/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur px-8 py-4 text-base font-semibold text-white hover:bg-white/20 transition-all"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Book a Meeting
-              </a>
-            </div>
+            <Link
+              href="/marketing/australia"
+              className="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-8 py-4 text-base font-bold text-neutral-900 hover:bg-yellow-300 transition-all hover:scale-105 shadow-xl"
+            >
+              <span>Explore Australia Program</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
