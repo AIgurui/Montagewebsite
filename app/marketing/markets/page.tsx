@@ -24,7 +24,7 @@ export default function Page() {
             Montage Oil operates across three strategic regions: Latin America, Africa, and Asia Pacific. We maintain direct origination relationships in China and Indonesia, with comprehensive coverage spanning these key markets.
           </p>
           <p className="text-neutral-600">
-            Our regional presence ensures shipping certainty through established logistics networks and flexible financing tailored to local market conditions. The live map below displays our operational footprint with real-time day/night visualization.
+            The live map below highlights our operational footprint with African capital cities and Melbourne marked with real-time local times. Our regional presence ensures shipping certainty through established logistics networks and flexible financing tailored to local market conditions.
           </p>
         </div>
       </Section>
@@ -36,7 +36,8 @@ export default function Page() {
           {/* Accessibility text summary */}
           <p className="sr-only">
             Montage Oil operates across three strategic regions: Latin America, Africa, and Asia Pacific.
-            The map shows our operational footprint with regional highlighting and real-time day/night visualization.
+            The map shows our operational footprint with regional highlighting, African capital cities with real-time local times,
+            Melbourne with local time, and live day/night visualization based on the sun position.
           </p>
 
           {/* CTAs */}

@@ -15,6 +15,15 @@ type RegionsData = {
   regions: Region[]
 }
 
+type City = {
+  name: string
+  country: string
+  lat: number
+  lon: number
+  timezone: string
+  isCapital: boolean
+}
+
 type WorldData = Topology & {
   objects: {
     countries: GeometryCollection
@@ -23,6 +32,7 @@ type WorldData = Topology & {
 
 export default function LiveMarketsMap() {
   const [regionsData, setRegionsData] = useState<RegionsData | null>(null)
+  const [cities, setCities] = useState<City[]>([])
   const [worldData, setWorldData] = useState<WorldData | null>(null)
   const [currentTime, setCurrentTime] = useState(new Date())
   const [isPaused, setPaused] = useState(false)
@@ -36,6 +46,14 @@ export default function LiveMarketsMap() {
       .then((res) => res.json())
       .then((data) => setRegionsData(data as RegionsData))
       .catch((err) => console.error('Failed to load regions:', err))
+  }, [])
+
+  // Fetch cities data
+  useEffect(() => {
+    fetch('/cities.json')
+      .then((res) => res.json())
+      .then((data) => setCities(data as City[]))
+      .catch((err) => console.error('Failed to load cities:', err))
   }, [])
 
   // Fetch world topology data
@@ -105,6 +123,33 @@ export default function LiveMarketsMap() {
   }
 
   const sunLon = getSunLongitude(currentTime)
+
+  // Convert lat/lon to SVG coordinates using projection
+  const projectPoint = (lat: number, lon: number) => {
+    const coords = projection([lon, lat])
+    return coords ? { x: coords[0], y: coords[1] } : null
+  }
+
+  // Get local time for a city
+  const getLocalTime = (timezone: string) => {
+    try {
+      return new Intl.DateTimeFormat('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZone: timezone,
+      }).format(currentTime)
+    } catch {
+      return '--:--'
+    }
+  }
+
+  // Calculate if a location is in daylight
+  const isInDaylight = (lon: number) => {
+    // Simplified: location is in daylight if within ~90 degrees of sun
+    const diff = Math.abs(((lon - sunLon + 540) % 360) - 180)
+    return diff < 90
+  }
 
   // Convert TopoJSON to GeoJSON features
   const countries =
@@ -210,6 +255,74 @@ export default function LiveMarketsMap() {
           className="transition-all duration-1000"
         />
 
+        {/* City markers - African capitals and Melbourne */}
+        {cities.map((city) => {
+          const point = projectPoint(city.lat, city.lon)
+          if (!point) return null
+
+          const localTime = getLocalTime(city.timezone)
+          const inDaylight = isInDaylight(city.lon)
+
+          // Use bright colors for visibility - amber for capitals, teal for Melbourne
+          const markerColor = city.country === 'Australia' ? '#14b8a6' : '#f59e0b'
+
+          return (
+            <g key={`${city.name}-${city.country}`} transform={`translate(${point.x}, ${point.y})`}>
+              {/* Pulsing ring (disabled if reduced motion) */}
+              {!prefersReducedMotion && !isPaused && (
+                <circle
+                  r={5}
+                  fill={markerColor}
+                  opacity={0.4}
+                  className="animate-ping"
+                />
+              )}
+              {/* Main marker dot */}
+              <circle
+                r={3}
+                fill={markerColor}
+                stroke="#ffffff"
+                strokeWidth={0.5}
+                className={!prefersReducedMotion && !isPaused ? 'animate-pulse' : ''}
+                style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }}
+              />
+              {/* Label background */}
+              <rect
+                x={-28}
+                y={8}
+                width={56}
+                height={24}
+                rx={3}
+                fill="rgba(0, 0, 0, 0.75)"
+                stroke="rgba(255, 255, 255, 0.2)"
+                strokeWidth={0.5}
+              />
+              {/* City name */}
+              <text
+                y={19}
+                textAnchor="middle"
+                fill="#ffffff"
+                fontSize={9}
+                fontWeight="600"
+                style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}
+              >
+                {city.name}
+              </text>
+              {/* Local time */}
+              <text
+                y={28}
+                textAnchor="middle"
+                fill={markerColor}
+                fontSize={8}
+                fontWeight="bold"
+                fontFamily="monospace"
+                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}
+              >
+                {localTime}
+              </text>
+            </g>
+          )
+        })}
       </svg>
 
       {/* Legend */}
