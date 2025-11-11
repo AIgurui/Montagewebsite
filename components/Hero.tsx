@@ -1,23 +1,24 @@
 import Link from 'next/link'
+import { ButtonPrimary, ButtonSecondary } from './Button'
 
 export default function Hero() {
   return (
-    <section className="relative py-20 md:py-28">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_40%_at_50%_0%,rgba(12,197,214,0.12),transparent_60%)]" />
-      <div className="container relative">
-        <h1 className="max-w-3xl font-inter text-4xl font-black leading-tight text-white md:text-6xl">
-          Fertilizers. <span className="text-brand">Intelligence.</span> Reach.
+    <section className="relative isolate overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-800 via-brand-700 to-brand-600" />
+      <div className="relative container px-6 py-20 text-white md:py-28">
+        <h1 className="max-w-3xl font-inter text-4xl font-black leading-tight md:text-6xl">
+          Fertilizers. <span className="text-white/90">Intelligence.</span> Reach.
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-slate-300">
-          Global fertilizer and energy trading with disciplined risk, transparent execution, and a partnership-first approach.
+        <p className="mt-4 max-w-2xl text-lg text-white/90">
+          Global trading with local execution — we manage complex supply chains and deliver tailor‑made solutions with disciplined risk and transparent operations.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/marketing/contact" className="rounded-full bg-brand px-5 py-3 font-medium text-black">Start a conversation</Link>
-          <Link href="/marketing/fertilizers" className="rounded-full border border-white/15 px-5 py-3 font-medium text-white">Explore fertilizers</Link>
+          <Link href="/marketing/contact"><ButtonPrimary>Start a conversation</ButtonPrimary></Link>
+          <Link href="/marketing/fertilizers"><ButtonSecondary>Explore fertilizers</ButtonSecondary></Link>
         </div>
         <div className="mt-10 grid gap-3 sm:grid-cols-3">
           {[ 'Integrated origination', 'Logistics certainty', 'Safety-first operations' ].map((t) => (
-            <div key={t} className="rounded-xl border border-white/10 bg-white/5 p-4 text-slate-200">
+            <div key={t} className="rounded-xl border border-white/20 bg-white/10 p-4 text-white/90">
               {t}
             </div>
           ))}
@@ -26,4 +27,3 @@ export default function Hero() {
     </section>
   )
 }
-

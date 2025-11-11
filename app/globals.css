@@ -2,16 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg: #0B1220;
+:root{
+  --brand-600:#1b4f91; --brand-700:#153e73; --brand-800:#0f2d56;
+  --accent-500:#14b8a6;
+  --ink:#0b1220; --muted:#6b7280; --line:#e5e7eb; --surface:#f9fafb; --white:#fff;
+  --focus:#6d9fca;
+}
+.dark{
+  --brand-600:#3e7fb8; --brand-700:#6d9fca; --brand-800:#a9c7e0;
+  --ink:#f3f4f6; --muted:#9ca3af; --line:#374151; --surface:#0b1220; --white:#0b1220;
 }
 
 html, body { height: 100%; }
-body { background: var(--bg); }
+body{ color:var(--ink); background:var(--white); }
+a{ color:var(--brand-600); text-underline-offset:2px; }
+a:hover{ color:var(--brand-700); }
+:focus-visible{ outline: none; box-shadow: var(--focus) 0 0 0 3px; border-radius:6px; }
 
 .container { @apply mx-auto max-w-6xl px-4; }
 
 /* Simple Prose */
-.prose-light h1, .prose-light h2, .prose-light h3 { @apply text-white; }
-.prose-light p, .prose-light li { @apply text-slate-300; }
-
+.prose-light h1, .prose-light h2, .prose-light h3 { @apply text-neutral-900 dark:text-white; }
+.prose-light p, .prose-light li { @apply text-neutral-700 dark:text-slate-300; }
