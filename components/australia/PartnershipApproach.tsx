@@ -12,7 +12,7 @@ export default function PartnershipApproach() {
       <div className="grid gap-8 lg:grid-cols-2">
         <div>
           <p className="text-lg text-neutral-700 mb-6">
-            We don't just deliver fertilizer—we build long-term partnerships that align with your business goals. Our approach is proven across global markets and tailored for Australian agricultural excellence.
+            We don&apos;t just deliver fertilizer—we build long-term partnerships that align with your business goals. Our approach is proven across global markets and tailored for Australian agricultural excellence.
           </p>
 
           <div className="space-y-4">
@@ -88,7 +88,7 @@ export default function PartnershipApproach() {
           <div className="rounded-xl bg-neutral-900 text-white p-8">
             <h3 className="text-xl font-bold mb-3">Ready to explore partnership options?</h3>
             <p className="text-white/80 mb-6">
-              Let's discuss how our Australian program can support your fertilizer requirements for the 2026 season and beyond.
+              Let&apos;s discuss how our Australian program can support your fertilizer requirements for the 2026 season and beyond.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
