@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 const links = [
   { href: '/marketing/australia', label: '🇦🇺 Australia', featured: true },
+  { href: '/marketing/markets', label: 'Markets' },
   { href: '/marketing/fertilizers', label: 'Fertilizers' },
   { href: '/marketing/origination', label: 'Origination' },
   { href: '/marketing/capabilities', label: 'Capabilities' },
