@@ -8,13 +8,6 @@ export default function AustraliaBanner() {
       <div className="container relative">
         <div className="mx-auto max-w-5xl">
           <div className="flex flex-col items-center text-center">
-            {/* Badge */}
-            <div className="inline-block mb-4">
-              <span className="rounded-full bg-yellow-400/20 border border-yellow-400/30 px-5 py-2 text-sm font-bold text-yellow-100 backdrop-blur">
-                NEW MARKET LAUNCH 2026
-              </span>
-            </div>
-
             {/* Title */}
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
               Montage Australia 🇦🇺
@@ -25,7 +18,7 @@ export default function AustraliaBanner() {
               Middle Eastern Urea for Australian Agriculture
             </p>
             <p className="text-base text-white/80 max-w-2xl mb-8">
-              2 Million MT annual volume • 250k MT consignment programs • CFR bulk cargoes at competitive pricing
+              Bulk Urea cargoes at Competitive Pricing & Terms
             </p>
 
             {/* Key Points */}
