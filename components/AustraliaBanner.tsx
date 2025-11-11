@@ -15,7 +15,7 @@ export default function AustraliaBanner() {
 
             {/* Description */}
             <p className="text-xl text-white/90 max-w-3xl mb-3 leading-relaxed">
-              Middle Eastern Urea for Australian Agriculture
+              Urea for Australian Agriculture
             </p>
             <p className="text-base text-white/80 max-w-2xl mb-8">
               Bulk Urea cargoes at Competitive Pricing & Terms
