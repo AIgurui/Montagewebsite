@@ -255,74 +255,73 @@ export default function LiveMarketsMap() {
           className="transition-all duration-1000"
         />
 
-        {/* City markers - African capitals and Melbourne */}
-        {cities.map((city) => {
-          const point = projectPoint(city.lat, city.lon)
-          if (!point) return null
+        {/* City markers - Melbourne only */}
+        {cities
+          .filter((city) => city.country === 'Australia')
+          .map((city) => {
+            const point = projectPoint(city.lat, city.lon)
+            if (!point) return null
 
-          const localTime = getLocalTime(city.timezone)
-          const inDaylight = isInDaylight(city.lon)
+            const localTime = getLocalTime(city.timezone)
+            const markerColor = '#14b8a6' // Teal for Melbourne
 
-          // Use bright colors for visibility - amber for capitals, teal for Melbourne
-          const markerColor = city.country === 'Australia' ? '#14b8a6' : '#f59e0b'
-
-          return (
-            <g key={`${city.name}-${city.country}`} transform={`translate(${point.x}, ${point.y})`}>
-              {/* Pulsing ring (disabled if reduced motion) */}
-              {!prefersReducedMotion && !isPaused && (
+            return (
+              <g key={`${city.name}-${city.country}`} transform={`translate(${point.x}, ${point.y})`}>
+                {/* Pulsing ring (disabled if reduced motion) */}
+                {!prefersReducedMotion && !isPaused && (
+                  <circle
+                    r={5}
+                    fill={markerColor}
+                    opacity={0.4}
+                    className="animate-ping"
+                  />
+                )}
+                {/* Main marker dot */}
                 <circle
-                  r={5}
+                  r={3}
                   fill={markerColor}
-                  opacity={0.4}
-                  className="animate-ping"
+                  stroke="#ffffff"
+                  strokeWidth={0.5}
+                  className={!prefersReducedMotion && !isPaused ? 'animate-pulse' : ''}
+                  style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }}
                 />
-              )}
-              {/* Main marker dot */}
-              <circle
-                r={3}
-                fill={markerColor}
-                stroke="#ffffff"
-                strokeWidth={0.5}
-                className={!prefersReducedMotion && !isPaused ? 'animate-pulse' : ''}
-                style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }}
-              />
-              {/* Label background */}
-              <rect
-                x={-28}
-                y={8}
-                width={56}
-                height={24}
-                rx={3}
-                fill="rgba(0, 0, 0, 0.75)"
-                stroke="rgba(255, 255, 255, 0.2)"
-                strokeWidth={0.5}
-              />
-              {/* City name */}
-              <text
-                y={19}
-                textAnchor="middle"
-                fill="#ffffff"
-                fontSize={9}
-                fontWeight="600"
-                style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}
-              >
-                {city.name}
-              </text>
-              {/* Local time */}
-              <text
-                y={28}
-                textAnchor="middle"
-                fill={markerColor}
-                fontSize={8}
-                fontWeight="bold"
-                fontFamily="monospace"
-                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}
-              >
-                {localTime}
-              </text>
-            </g>
-          )
-        })}
+                {/* Label background */}
+                <rect
+                  x={-28}
+                  y={8}
+                  width={56}
+                  height={24}
+                  rx={3}
+                  fill="rgba(0, 0, 0, 0.75)"
+                  stroke="rgba(255, 255, 255, 0.2)"
+                  strokeWidth={0.5}
+                />
+                {/* City name */}
+                <text
+                  y={19}
+                  textAnchor="middle"
+                  fill="#ffffff"
+                  fontSize={9}
+                  fontWeight="600"
+                  style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}
+                >
+                  {city.name}
+                </text>
+                {/* Local time */}
+                <text
+                  y={28}
+                  textAnchor="middle"
+                  fill={markerColor}
+                  fontSize={8}
+                  fontWeight="bold"
+                  fontFamily="monospace"
+                  style={{ textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}
+                >
+                  {localTime}
+                </text>
+              </g>
+            )
+          })}
       </svg>
 
       {/* Legend */}
