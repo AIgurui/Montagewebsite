@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero'
 import KPI from '@/components/KPI'
 import Section from '@/components/Section'
+import AustraliaBanner from '@/components/AustraliaBanner'
 import Link from 'next/link'
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function Page() {
   return (
     <>
       <Hero />
+      <AustraliaBanner />
       <KPI id="kpi" nextId="positioning" />
       <Section id="positioning" nextId="end-home" eyebrow="Positioning" title="Global trading with local execution">
         <p>
