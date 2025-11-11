@@ -159,7 +159,7 @@ export default function LiveMarketsMap() {
 
   // Create a map of country names to region colors
   const countryToColor = new Map<string, string>()
-  const defaultLandColor = '#e5e5e0'
+  const defaultLandColor = '#d1d5db' // Neutral gray for non-operational countries
 
   regionsData?.regions.forEach((region) => {
     region.countries.forEach((country) => {
@@ -191,6 +191,7 @@ export default function LiveMarketsMap() {
         {countries.map((country, i) => {
           const countryName = (country.properties as any)?.name as string | undefined
           const fillColor = getCountryColor(countryName)
+          const isOperational = countryToColor.has(countryName || '')
 
           return (
             <path
@@ -200,7 +201,7 @@ export default function LiveMarketsMap() {
               stroke="#1e293b"
               strokeWidth={0.3}
               strokeLinejoin="round"
-              opacity={0.9}
+              opacity={isOperational ? 0.85 : 0.6}
             />
           )
         })}
