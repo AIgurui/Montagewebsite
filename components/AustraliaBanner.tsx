@@ -22,21 +22,17 @@ export default function AustraliaBanner() {
 
             {/* Description */}
             <p className="text-xl text-white/90 max-w-3xl mb-3 leading-relaxed">
-              Premium Middle Eastern Urea for Australian Agriculture
+              Middle Eastern Urea for Australian Agriculture
             </p>
             <p className="text-base text-white/80 max-w-2xl mb-8">
-              2 Million MT annual volume • 250k MT consignment programs • DAWE biosecurity compliant supply chain from Dubai to Australian ports
+              2 Million MT annual volume • 250k MT consignment programs • CFR bulk cargoes at competitive pricing
             </p>
 
             {/* Key Points */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 w-full max-w-4xl">
+            <div className="grid grid-cols-3 gap-4 mb-8 w-full max-w-3xl">
               <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur p-4">
                 <div className="text-2xl font-black text-yellow-300">46% N</div>
-                <div className="text-xs text-white/80 mt-1">Premium Urea</div>
-              </div>
-              <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur p-4">
-                <div className="text-2xl font-black text-yellow-300">Wheat</div>
-                <div className="text-xs text-white/80 mt-1">Canola • Cotton</div>
+                <div className="text-xs text-white/80 mt-1">Urea</div>
               </div>
               <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur p-4">
                 <div className="text-2xl font-black text-yellow-300">DAWE</div>
@@ -44,7 +40,7 @@ export default function AustraliaBanner() {
               </div>
               <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur p-4">
                 <div className="text-2xl font-black text-yellow-300">ME Origin</div>
-                <div className="text-xs text-white/80 mt-1">OMIFCO • Fertiglobe</div>
+                <div className="text-xs text-white/80 mt-1">Middle East</div>
               </div>
             </div>
 
