@@ -12,7 +12,7 @@ export default function Page() {
       </Section>
       <Section id="safety-compliance" title="Safety & Compliance">
         <p>
-          A safety-first principle underpins operations. KYCs, sanctions screening, and AML controls form the foundation of every trade.
+          A safety-first principle underpins operations.
         </p>
       </Section>
     </>
