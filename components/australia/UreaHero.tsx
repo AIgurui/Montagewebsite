@@ -16,35 +16,35 @@ export default function UreaHero() {
         </div>
 
         <h1 className="max-w-4xl font-inter text-4xl font-black leading-tight md:text-6xl">
-          Premium Middle Eastern Urea for Australian Agriculture
+          Urea for Australian Agriculture
         </h1>
 
         <p className="mt-4 max-w-2xl text-xl text-white/90 leading-relaxed">
-          2 Million MT annual trading volume. Flexible consignment programs. DAWE biosecurity compliant supply chain from Dubai to Australian ports.
+          Direct urea supply from established sources. Flexible programs tailored to Australian agricultural needs.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4">
           <Link href="#urea-focus">
             <ButtonPrimary className="text-lg px-8 py-4">Configure Your Program</ButtonPrimary>
           </Link>
-          <a href="/brochure/Montage_Oil_DMCC_Company_Profile_2025.pdf" target="_blank" rel="noopener noreferrer">
-            <ButtonSecondary className="text-lg px-8 py-4">Download Technical Specs</ButtonSecondary>
-          </a>
+          <Link href="#contact-form">
+            <ButtonSecondary className="text-lg px-8 py-4">Request Specifications</ButtonSecondary>
+          </Link>
         </div>
 
         {/* Trust Indicators */}
         <div className="mt-12 grid gap-4 sm:grid-cols-3 max-w-3xl">
           <div className="rounded-xl border border-white/20 bg-white/10 backdrop-blur p-5">
-            <div className="text-3xl font-black text-yellow-300">2M MT</div>
-            <div className="text-sm text-white/80 mt-1">Annual Urea Volume</div>
+            <div className="text-3xl font-black text-yellow-300">46% N</div>
+            <div className="text-sm text-white/80 mt-1">Nitrogen Content</div>
           </div>
           <div className="rounded-xl border border-white/20 bg-white/10 backdrop-blur p-5">
-            <div className="text-3xl font-black text-yellow-300">250k MT</div>
-            <div className="text-sm text-white/80 mt-1">Consignment Capacity</div>
+            <div className="text-3xl font-black text-yellow-300">Granular & Prilled</div>
+            <div className="text-sm text-white/80 mt-1">Forms Available</div>
           </div>
           <div className="rounded-xl border border-white/20 bg-white/10 backdrop-blur p-5">
-            <div className="text-3xl font-black text-yellow-300">ME Origin</div>
-            <div className="text-sm text-white/80 mt-1">Premium Suppliers</div>
+            <div className="text-3xl font-black text-yellow-300">24/7</div>
+            <div className="text-sm text-white/80 mt-1">Trade Support</div>
           </div>
         </div>
 

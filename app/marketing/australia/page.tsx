@@ -1,14 +1,12 @@
 import Section from '@/components/Section'
 import UreaHero from '@/components/australia/UreaHero'
-import SupplyChainAdvantages from '@/components/australia/SupplyChainAdvantages'
 import PartnershipApproach from '@/components/australia/PartnershipApproach'
-import AustraliaKPI from '@/components/australia/AustraliaKPI'
 import Link from 'next/link'
 import { ButtonPrimary, ButtonSecondary } from '@/components/Button'
 
 export const metadata = {
-  title: 'Australia Market - Premium Urea Supply',
-  description: 'Montage Oil brings premium Middle Eastern urea to Australian agriculture. 2M MT annual volume, flexible consignment programs, DAWE biosecurity compliant.',
+  title: 'Australia Market - Urea Supply',
+  description: 'Montage Oil brings urea to Australian agriculture. Flexible consignment programs tailored to your seasonal needs.',
 }
 
 export default function Page() {
@@ -16,13 +14,10 @@ export default function Page() {
     <>
       <UreaHero />
 
-      <AustraliaKPI />
-
       <Section
         id="urea-focus"
         eyebrow="Australia 2026"
-        title="Premium Middle Eastern Urea for Australian Agriculture"
-        nextId="supply-chain"
+        title="Urea for Australian Agriculture"
       >
         <div className="grid gap-6 md:grid-cols-2">
           <div>
@@ -34,15 +29,11 @@ export default function Page() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Origin:</strong> Premium Middle Eastern sources (OMIFCO, Fertiglobe)</span>
+                <span><strong>Origin:</strong> Direct from established producers (OMIFCO, Fertiglobe)</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-brand-600 font-bold">•</span>
                 <span><strong>Nitrogen Content:</strong> 46% minimum</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Compliance:</strong> DAWE biosecurity certified supply chain</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-brand-600 font-bold">•</span>
@@ -73,14 +64,82 @@ export default function Page() {
           </div>
         </div>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link href="/marketing/contact"><ButtonPrimary>Configure Your Seasonal Program</ButtonPrimary></Link>
+          <Link href="#contact-form"><ButtonPrimary>Request Specifications</ButtonPrimary></Link>
           <a href="/brochure/Montage_Oil_DMCC_Company_Profile_2025.pdf" target="_blank" rel="noopener noreferrer">
             <ButtonSecondary>View Full Product Portfolio</ButtonSecondary>
           </a>
         </div>
       </Section>
 
-      <SupplyChainAdvantages />
+      <Section
+        id="contact-form"
+        eyebrow="Get in Touch"
+        title="Request Product Specifications"
+        className="bg-neutral-50"
+      >
+        <p className="text-lg text-neutral-700 mb-8 max-w-2xl">
+          Leave your contact details and we&apos;ll send you detailed product specifications and discuss your seasonal program needs.
+        </p>
+        <form action="/api/contact" method="POST" className="max-w-xl">
+          <div className="space-y-4">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-neutral-900 mb-1">
+                Email Address <span className="text-red-600">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-neutral-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
+                placeholder="your.email@company.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="whatsapp" className="block text-sm font-medium text-neutral-900 mb-1">
+                WhatsApp Number <span className="text-neutral-500">(optional)</span>
+              </label>
+              <input
+                type="tel"
+                id="whatsapp"
+                name="whatsapp"
+                className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-neutral-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
+                placeholder="+61 XXX XXX XXX"
+              />
+            </div>
+            <div>
+              <label htmlFor="company" className="block text-sm font-medium text-neutral-900 mb-1">
+                Company Name <span className="text-neutral-500">(optional)</span>
+              </label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-neutral-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
+                placeholder="Your Company"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-neutral-900 mb-1">
+                Message <span className="text-neutral-500">(optional)</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-neutral-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
+                placeholder="Tell us about your seasonal requirements..."
+              />
+            </div>
+            <button
+              type="submit"
+              className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-6 py-3 font-semibold text-white hover:bg-brand-700 transition-colors"
+            >
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </Section>
 
       <PartnershipApproach />
 
@@ -90,11 +149,11 @@ export default function Page() {
         title="Technical Documentation & Specifications"
         className="bg-neutral-50"
       >
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card">
             <div className="text-brand-600 font-bold mb-2">Product Specifications</div>
             <p className="text-sm text-neutral-600 mb-4">Detailed technical specs, origin certificates, and quality parameters for urea products.</p>
-            <Link href="/marketing/contact" className="text-sm font-medium text-brand-600 hover:text-brand-700">
+            <Link href="#contact-form" className="text-sm font-medium text-brand-600 hover:text-brand-700">
               Request Specs →
             </Link>
           </div>
@@ -105,13 +164,6 @@ export default function Page() {
               Download Brochure →
             </a>
           </div>
-          <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card">
-            <div className="text-brand-600 font-bold mb-2">DAWE Compliance</div>
-            <p className="text-sm text-neutral-600 mb-4">Biosecurity documentation and quarantine standards compliance information.</p>
-            <Link href="/marketing/contact" className="text-sm font-medium text-brand-600 hover:text-brand-700">
-              Get Documentation →
-            </Link>
-          </div>
         </div>
       </Section>
 
@@ -121,7 +173,7 @@ export default function Page() {
         className="bg-brand-600 text-white"
       >
         <p className="text-lg text-white/90 max-w-2xl">
-          Speak with our Australia team to configure a consignment program tailored to your seasonal requirements and volume needs.
+          Speak with our Australia team to discuss programs tailored to your seasonal requirements.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a
