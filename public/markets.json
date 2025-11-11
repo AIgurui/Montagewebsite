@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Mexico",
+    "city": "Mexico City",
+    "lat": 19.4326,
+    "lon": -99.1332,
+    "region": "LatAm",
+    "priority": true,
+    "timezone": "America/Mexico_City"
+  },
+  {
+    "name": "Brazil",
+    "city": "São Paulo",
+    "lat": -23.5505,
+    "lon": -46.6333,
+    "region": "LatAm",
+    "priority": true,
+    "timezone": "America/Sao_Paulo"
+  },
+  {
+    "name": "Nigeria",
+    "city": "Lagos",
+    "lat": 6.5244,
+    "lon": 3.3792,
+    "region": "Africa",
+    "priority": false,
+    "timezone": "Africa/Lagos"
+  },
+  {
+    "name": "Kenya",
+    "city": "Nairobi",
+    "lat": -1.2921,
+    "lon": 36.8219,
+    "region": "Africa",
+    "priority": false,
+    "timezone": "Africa/Nairobi"
+  },
+  {
+    "name": "Vietnam",
+    "city": "Ho Chi Minh City",
+    "lat": 10.8231,
+    "lon": 106.6297,
+    "region": "Asia",
+    "priority": false,
+    "timezone": "Asia/Ho_Chi_Minh"
+  },
+  {
+    "name": "Indonesia",
+    "city": "Jakarta",
+    "lat": -6.2088,
+    "lon": 106.8456,
+    "region": "Asia",
+    "priority": false,
+    "timezone": "Asia/Jakarta"
+  },
+  {
+    "name": "Singapore",
+    "city": "Singapore",
+    "lat": 1.3521,
+    "lon": 103.8198,
+    "region": "Asia",
+    "priority": true,
+    "timezone": "Asia/Singapore"
+  },
+  {
+    "name": "Malaysia",
+    "city": "Kuala Lumpur",
+    "lat": 3.1390,
+    "lon": 101.6869,
+    "region": "Asia",
+    "priority": false,
+    "timezone": "Asia/Kuala_Lumpur"
+  },
+  {
+    "name": "Australia",
+    "city": "Sydney",
+    "lat": -33.8688,
+    "lon": 151.2093,
+    "region": "Australia",
+    "priority": true,
+    "timezone": "Australia/Sydney"
+  },
+  {
+    "name": "New Zealand",
+    "city": "Auckland",
+    "lat": -36.8485,
+    "lon": 174.7633,
+    "region": "Australia",
+    "priority": false,
+    "timezone": "Pacific/Auckland"
+  },
+  {
+    "name": "China",
+    "city": "Shanghai",
+    "lat": 31.2304,
+    "lon": 121.4737,
+    "region": "Asia",
+    "priority": true,
+    "timezone": "Asia/Shanghai"
+  },
+  {
+    "name": "India",
+    "city": "Mumbai",
+    "lat": 19.0760,
+    "lon": 72.8777,
+    "region": "Asia",
+    "priority": true,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "UAE",
+    "city": "Dubai",
+    "lat": 25.2048,
+    "lon": 55.2708,
+    "region": "MENA",
+    "priority": true,
+    "timezone": "Asia/Dubai"
+  },
+  {
+    "name": "Oman",
+    "city": "Muscat",
+    "lat": 23.5880,
+    "lon": 58.3829,
+    "region": "MENA",
+    "priority": false,
+    "timezone": "Asia/Muscat"
+  },
+  {
+    "name": "Saudi Arabia",
+    "city": "Riyadh",
+    "lat": 24.7136,
+    "lon": 46.6753,
+    "region": "MENA",
+    "priority": true,
+    "timezone": "Asia/Riyadh"
+  }
+]
