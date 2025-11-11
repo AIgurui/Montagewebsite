@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const links = [
+  { href: '/marketing/australia', label: '🇦🇺 Australia', featured: true },
   { href: '/marketing/fertilizers', label: 'Fertilizers' },
   { href: '/marketing/origination', label: 'Origination' },
   { href: '/marketing/capabilities', label: 'Capabilities' },
@@ -21,7 +22,11 @@ export default function Header() {
         </Link>
         <nav className="hidden gap-6 md:flex">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className="text-sm text-neutral-700 hover:text-brand-700">
+            <Link
+              key={l.href}
+              href={l.href}
+              className={l.featured ? "text-sm font-semibold text-brand-600 hover:text-brand-700" : "text-sm text-neutral-700 hover:text-brand-700"}
+            >
               {l.label}
             </Link>
           ))}
