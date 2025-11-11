@@ -29,18 +29,9 @@ export default function AustraliaBanner() {
             </p>
 
             {/* Key Points */}
-            <div className="grid grid-cols-3 gap-4 mb-8 w-full max-w-3xl">
-              <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur p-4">
-                <div className="text-2xl font-black text-yellow-300">46% N</div>
-                <div className="text-xs text-white/80 mt-1">Urea</div>
-              </div>
-              <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur p-4">
-                <div className="text-2xl font-black text-yellow-300">DAWE</div>
-                <div className="text-xs text-white/80 mt-1">Certified</div>
-              </div>
-              <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur p-4">
-                <div className="text-2xl font-black text-yellow-300">ME Origin</div>
-                <div className="text-xs text-white/80 mt-1">Middle East</div>
+            <div className="mb-8">
+              <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur px-8 py-4">
+                <div className="text-3xl font-black text-yellow-300">Urea</div>
               </div>
             </div>
 
