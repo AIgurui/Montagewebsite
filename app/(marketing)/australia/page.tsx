@@ -124,7 +124,18 @@ export default function Page() {
           Speak with our Australia team to configure a consignment program tailored to your seasonal requirements and volume needs.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/marketing/contact"><ButtonPrimary>Speak with Australia Team</ButtonPrimary></Link>
+          <a
+            href="https://calendly.com/zakiullah-montageoil/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-brand-600 hover:bg-neutral-100 transition-colors shadow-lg"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Book a Meeting
+          </a>
+          <Link href="/marketing/contact"><ButtonSecondary>Send a Message</ButtonSecondary></Link>
           <Link href="/marketing/fertilizers"><ButtonSecondary>Explore All Fertilizers</ButtonSecondary></Link>
         </div>
       </Section>
