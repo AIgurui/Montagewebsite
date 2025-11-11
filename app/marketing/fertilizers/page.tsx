@@ -86,13 +86,10 @@ export default function Page() {
           <div className="grid gap-4 sm:grid-cols-2">
             {nitrogenProducts.map((product) => (
               <div key={product.name} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-teal-300">
-                <div className="mb-2 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-100">
-                    <span className="text-xl">🌱</span>
-                  </div>
-                  <h4 className="text-lg font-semibold text-neutral-900">{product.name}</h4>
+                <div className="mb-3">
+                  <h4 className="text-lg font-semibold text-neutral-900 mb-2">{product.name}</h4>
+                  <p className="text-sm text-neutral-600">{product.desc}</p>
                 </div>
-                <p className="text-sm text-neutral-600">{product.desc}</p>
               </div>
             ))}
           </div>
@@ -109,13 +106,10 @@ export default function Page() {
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {phosphateProducts.map((product) => (
               <div key={product.name} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-amber-300">
-                <div className="mb-2 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100">
-                    <span className="text-xl">⚡</span>
-                  </div>
-                  <h4 className="text-lg font-semibold text-neutral-900">{product.name}</h4>
+                <div className="mb-3">
+                  <h4 className="text-lg font-semibold text-neutral-900 mb-2">{product.name}</h4>
+                  <p className="text-sm text-neutral-600">{product.desc}</p>
                 </div>
-                <p className="text-sm text-neutral-600">{product.desc}</p>
               </div>
             ))}
           </div>
@@ -132,13 +126,10 @@ export default function Page() {
           <div className="grid gap-4 sm:grid-cols-2">
             {potashProducts.map((product) => (
               <div key={product.name} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-indigo-300">
-                <div className="mb-2 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100">
-                    <span className="text-xl">💧</span>
-                  </div>
-                  <h4 className="text-lg font-semibold text-neutral-900">{product.name}</h4>
+                <div className="mb-3">
+                  <h4 className="text-lg font-semibold text-neutral-900 mb-2">{product.name}</h4>
+                  <p className="text-sm text-neutral-600">{product.desc}</p>
                 </div>
-                <p className="text-sm text-neutral-600">{product.desc}</p>
               </div>
             ))}
           </div>

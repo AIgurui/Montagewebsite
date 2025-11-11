@@ -5,10 +5,9 @@ const links = [
   { href: '/marketing/australia', label: '🇦🇺 Australia', featured: true },
   { href: '/marketing/markets', label: 'Markets' },
   { href: '/marketing/fertilizers', label: 'Fertilizers' },
+  { href: '/marketing/energy', label: 'Energy' },
   { href: '/marketing/origination', label: 'Origination' },
   { href: '/marketing/capabilities', label: 'Capabilities' },
-  { href: '/marketing/territories', label: 'Territories' },
-  { href: '/marketing/energy', label: 'Energy' },
   { href: '/marketing/about', label: 'About' },
   { href: '/marketing/contact', label: 'Contact' },
 ]
