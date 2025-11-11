@@ -1,0 +1,40 @@
+{
+  "regions": [
+    {
+      "name": "Latin America",
+      "color": "#14b8a6",
+      "countries": [
+        "Mexico", "Guatemala", "Belize", "Honduras", "El Salvador", "Nicaragua",
+        "Costa Rica", "Panama", "Colombia", "Venezuela", "Guyana", "Suriname",
+        "Ecuador", "Peru", "Brazil", "Bolivia", "Paraguay", "Chile", "Argentina",
+        "Uruguay", "Cuba", "Jamaica", "Haiti", "Dominican Rep.", "Puerto Rico",
+        "Trinidad and Tobago"
+      ]
+    },
+    {
+      "name": "Africa",
+      "color": "#f59e0b",
+      "countries": [
+        "Morocco", "Algeria", "Tunisia", "Libya", "Egypt", "W. Sahara", "Mauritania",
+        "Mali", "Niger", "Chad", "Sudan", "S. Sudan", "Eritrea", "Djibouti", "Ethiopia",
+        "Somalia", "Somaliland", "Senegal", "Gambia", "Guinea-Bissau", "Guinea",
+        "Sierra Leone", "Liberia", "Côte d'Ivoire", "Burkina Faso", "Ghana", "Togo",
+        "Benin", "Nigeria", "Cameroon", "Central African Rep.", "Eq. Guinea", "Gabon",
+        "Congo", "Dem. Rep. Congo", "Uganda", "Kenya", "Rwanda", "Burundi", "Tanzania",
+        "Angola", "Zambia", "Malawi", "Mozambique", "Zimbabwe", "Botswana", "Namibia",
+        "South Africa", "Lesotho", "eSwatini", "Madagascar"
+      ]
+    },
+    {
+      "name": "Asia Pacific",
+      "color": "#6366f1",
+      "countries": [
+        "China", "Taiwan", "Japan", "South Korea", "North Korea", "Mongolia",
+        "Indonesia", "Malaysia", "Singapore", "Brunei", "Philippines", "Vietnam",
+        "Thailand", "Myanmar", "Laos", "Cambodia", "Australia", "New Zealand",
+        "Papua New Guinea", "Fiji", "Solomon Is.", "Vanuatu", "New Caledonia",
+        "India", "Pakistan", "Bangladesh", "Sri Lanka", "Nepal", "Bhutan"
+      ]
+    }
+  ]
+}
