@@ -1,11 +1,13 @@
-export default function KPI() {
+import NextSection from './NextSection'
+
+export default function KPI({ id = 'kpi', nextId = 'positioning' }: { id?: string; nextId?: string }) {
   const items = [
     { k: '24/7', t: 'Trading Coverage' },
     { k: '+15', t: 'Markets Served' },
     { k: 'Zero', t: 'Tolerance on Risk' },
   ]
   return (
-    <section className="py-8 bg-neutral-50">
+    <section id={id} className="relative bg-neutral-50 py-8">
       <div className="container grid gap-3 sm:grid-cols-3">
         {items.map((i) => (
           <div key={i.t} className="rounded-xl border border-neutral-200 bg-white p-5 text-center shadow-card">
@@ -14,6 +16,7 @@ export default function KPI() {
           </div>
         ))}
       </div>
+      <NextSection to={nextId} />
     </section>
   )
 }

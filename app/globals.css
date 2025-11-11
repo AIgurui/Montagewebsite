@@ -19,6 +19,8 @@ a{ color:var(--brand-600); text-underline-offset:2px; }
 a:hover{ color:var(--brand-700); }
 :focus-visible{ outline: none; box-shadow: var(--focus) 0 0 0 3px; border-radius:6px; }
 
+html { scroll-behavior: smooth; }
+
 .container { @apply mx-auto max-w-6xl px-4; }
 
 /* Simple Prose */

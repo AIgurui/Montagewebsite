@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <KPI />
-      <Section eyebrow="Positioning" title="Global trading with local execution">
+      <KPI id="kpi" nextId="positioning" />
+      <Section id="positioning" nextId="end-home" eyebrow="Positioning" title="Global trading with local execution">
         <p>
           We manage complex supply chains and combine a global network with outstanding local execution. Our integrated solutions and partnership mindset deliver tailor-made market access and best-in-class service.
         </p>
@@ -22,7 +22,7 @@ export default function Page() {
           <Link href="/marketing/contact" className="rounded-full bg-brand px-5 py-3 font-medium text-black">Contact</Link>
         </div>
       </Section>
+      <div id="end-home" />
     </>
   )
 }
-
