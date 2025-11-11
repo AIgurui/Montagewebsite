@@ -1,7 +1,9 @@
 'use client'
 
 import { useEffect, useState, useRef } from 'react'
-import Image from 'next/image'
+import { geoPath, geoEquirectangular } from 'd3-geo'
+import { feature } from 'topojson-client'
+import type { Topology, GeometryCollection } from 'topojson-specification'
 
 type Market = {
   name: string
@@ -13,12 +15,20 @@ type Market = {
   timezone: string
 }
 
+type WorldData = Topology & {
+  objects: {
+    countries: GeometryCollection
+  }
+}
+
 export default function LiveMarketsMap() {
   const [markets, setMarkets] = useState<Market[]>([])
+  const [worldData, setWorldData] = useState<WorldData | null>(null)
   const [currentTime, setCurrentTime] = useState(new Date())
   const [isPaused, setPaused] = useState(false)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
+  const svgRef = useRef<SVGSVGElement>(null)
 
   // Fetch markets data
   useEffect(() => {
@@ -26,6 +36,14 @@ export default function LiveMarketsMap() {
       .then((res) => res.json())
       .then((data) => setMarkets(data))
       .catch((err) => console.error('Failed to load markets:', err))
+  }, [])
+
+  // Fetch world topology data
+  useEffect(() => {
+    fetch('/world-110m.json')
+      .then((res) => res.json())
+      .then((data) => setWorldData(data as WorldData))
+      .catch((err) => console.error('Failed to load world data:', err))
   }, [])
 
   // Check for reduced motion preference
@@ -65,6 +83,17 @@ export default function LiveMarketsMap() {
     return () => clearInterval(interval)
   }, [isPaused, prefersReducedMotion])
 
+  // Map dimensions
+  const width = 1200
+  const height = 675 // 16:9 aspect ratio
+
+  // Setup projection and path generator
+  const projection = geoEquirectangular()
+    .scale(width / (2 * Math.PI))
+    .translate([width / 2, height / 2])
+
+  const pathGenerator = geoPath().projection(projection)
+
   // Calculate sun terminator (day/night line)
   // Simplified calculation: sun is at longitude based on UTC time
   const getSunLongitude = (date: Date) => {
@@ -77,12 +106,10 @@ export default function LiveMarketsMap() {
 
   const sunLon = getSunLongitude(currentTime)
 
-  // Convert lat/lon to x/y percentage for positioning
-  const toXY = (lat: number, lon: number) => {
-    // Simple equirectangular projection
-    const x = ((lon + 180) / 360) * 100
-    const y = ((90 - lat) / 180) * 100
-    return { x: `${x}%`, y: `${y}%` }
+  // Convert lat/lon to SVG coordinates using projection
+  const projectPoint = (lat: number, lon: number) => {
+    const coords = projection([lon, lat])
+    return coords ? { x: coords[0], y: coords[1] } : null
   }
 
   // Get local time for a market
@@ -106,108 +133,153 @@ export default function LiveMarketsMap() {
     return diff < 90
   }
 
+  // Convert TopoJSON to GeoJSON features
+  const countries =
+    worldData
+      ? feature(worldData, worldData.objects.countries).features
+      : []
+
   return (
     <div
       ref={containerRef}
-      className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-[#0a1628] shadow-2xl"
+      className="relative overflow-hidden rounded-2xl border border-neutral-200 shadow-2xl"
     >
-      {/* World map background */}
-      <div className="absolute inset-0">
-        <Image
-          src="/map.png"
-          alt="World map"
-          fill
-          className="object-cover opacity-40"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-          priority
+      <svg
+        ref={svgRef}
+        viewBox={`0 0 ${width} ${height}`}
+        className="w-full h-auto"
+        style={{ display: 'block' }}
+      >
+        {/* Ocean background (brand navy) */}
+        <rect width={width} height={height} fill="#0a1628" />
+
+        {/* Land masses with borders */}
+        {countries.map((country, i) => (
+          <path
+            key={`country-${i}`}
+            d={pathGenerator(country) || ''}
+            fill="#e5e5e0"
+            stroke="#9ca3af"
+            strokeWidth={0.5}
+            strokeLinejoin="round"
+          />
+        ))}
+
+        {/* Day/night overlay with animated terminator */}
+        <defs>
+          <linearGradient id="dayNightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop
+              offset="0%"
+              stopColor="rgba(10, 22, 40, 0.7)"
+            />
+            <stop
+              offset={`${((sunLon + 180 - 90 + 360) % 360) / 3.6}%`}
+              stopColor="rgba(10, 22, 40, 0.4)"
+            />
+            <stop
+              offset={`${((sunLon + 180) % 360) / 3.6}%`}
+              stopColor="rgba(255, 193, 7, 0.15)"
+            />
+            <stop
+              offset={`${((sunLon + 180 + 90) % 360) / 3.6}%`}
+              stopColor="rgba(10, 22, 40, 0.4)"
+            />
+            <stop
+              offset="100%"
+              stopColor="rgba(10, 22, 40, 0.7)"
+            />
+          </linearGradient>
+
+          <radialGradient id="twilightGlow">
+            <stop offset="0%" stopColor="rgba(255, 193, 7, 0.4)" />
+            <stop offset="40%" stopColor="transparent" />
+          </radialGradient>
+        </defs>
+
+        {/* Apply day/night overlay */}
+        <rect
+          width={width}
+          height={height}
+          fill="url(#dayNightGradient)"
+          className="transition-all duration-1000"
         />
-      </div>
 
-      {/* Day/night overlay with animated terminator */}
-      <div
-        className="pointer-events-none absolute inset-0 transition-all duration-1000"
-        style={{
-          background: `linear-gradient(90deg,
-            rgba(10, 22, 40, 0.7) 0%,
-            rgba(10, 22, 40, 0.4) ${((sunLon + 180 - 90 + 360) % 360) / 3.6}%,
-            rgba(255, 193, 7, 0.15) ${((sunLon + 180) % 360) / 3.6}%,
-            rgba(10, 22, 40, 0.4) ${((sunLon + 180 + 90) % 360) / 3.6}%,
-            rgba(10, 22, 40, 0.7) 100%
-          )`,
-        }}
-      />
+        {/* Twilight glow at terminator */}
+        <ellipse
+          cx={((sunLon + 180) % 360) / 360 * width}
+          cy={height / 2}
+          rx={width * 0.25}
+          ry={height * 0.8}
+          fill="url(#twilightGlow)"
+          opacity={0.3}
+          className="transition-all duration-1000"
+        />
 
-      {/* Twilight glow at terminator */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-30 transition-all duration-1000"
-        style={{
-          background: `radial-gradient(ellipse 800px 2000px at ${((sunLon + 180) % 360) / 3.6}% 50%,
-            rgba(255, 193, 7, 0.4),
-            transparent 40%
-          )`,
-        }}
-      />
+        {/* Market markers */}
+        {markets.map((market) => {
+          const point = projectPoint(market.lat, market.lon)
+          if (!point) return null
 
-      {/* Aspect ratio container */}
-      <div className="aspect-[16/9] w-full" />
+          const localTime = getLocalTime(market.timezone)
+          const inDaylight = isInDaylight(market.lon)
+          const markerColor = market.priority
+            ? inDaylight ? '#fbbf24' : '#60a5fa'
+            : inDaylight ? '#fcd34d' : '#93c5fd'
 
-      {/* Market markers */}
-      {markets.map((market) => {
-        const { x, y } = toXY(market.lat, market.lon)
-        const localTime = getLocalTime(market.timezone)
-        const inDaylight = isInDaylight(market.lon)
-
-        return (
-          <div
-            key={market.name}
-            className="absolute z-10 -translate-x-1/2 -translate-y-1/2"
-            style={{ left: x, top: y }}
-          >
-            {/* Pulsing marker dot */}
-            <div className="relative flex flex-col items-center">
-              <div className="relative">
-                {/* Pulse animation (disabled if reduced motion) */}
-                {!prefersReducedMotion && !isPaused && (
-                  <div
-                    className={`absolute inset-0 h-3 w-3 rounded-full animate-ping ${
-                      inDaylight ? 'bg-yellow-400/50' : 'bg-blue-400/50'
-                    }`}
-                  />
-                )}
-                {/* Main dot */}
-                <div
-                  className={`h-3 w-3 rounded-full shadow-lg ${
-                    market.priority
-                      ? inDaylight
-                        ? 'bg-yellow-400 shadow-yellow-400/50'
-                        : 'bg-blue-400 shadow-blue-400/50'
-                      : inDaylight
-                      ? 'bg-yellow-300 shadow-yellow-300/50'
-                      : 'bg-blue-300 shadow-blue-300/50'
-                  } ${!prefersReducedMotion && !isPaused ? 'animate-pulse' : ''}`}
+          return (
+            <g key={market.name} transform={`translate(${point.x}, ${point.y})`}>
+              {/* Pulsing ring (disabled if reduced motion) */}
+              {!prefersReducedMotion && !isPaused && (
+                <circle
+                  r={6}
+                  fill={markerColor}
+                  opacity={0.5}
+                  className="animate-ping"
                 />
-              </div>
-              {/* Label with local time */}
-              <div className="mt-2 flex flex-col items-center whitespace-nowrap">
-                <div
-                  className={`text-xs font-bold drop-shadow-lg ${
-                    inDaylight ? 'text-yellow-100' : 'text-blue-100'
-                  }`}
-                >
-                  {market.city}
-                </div>
-                <div
-                  className={`text-[10px] font-mono drop-shadow ${
-                    inDaylight ? 'text-yellow-200/80' : 'text-blue-200/80'
-                  }`}
-                >
-                  {localTime}
-                </div>
-              </div>
-            </div>
-          </div>
-        )
-      })}
+              )}
+              {/* Main marker dot */}
+              <circle
+                r={4}
+                fill={markerColor}
+                className={!prefersReducedMotion && !isPaused ? 'animate-pulse' : ''}
+                style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }}
+              />
+              {/* Label background */}
+              <rect
+                x={-30}
+                y={10}
+                width={60}
+                height={28}
+                rx={4}
+                fill="rgba(0, 0, 0, 0.6)"
+                style={{ backdropFilter: 'blur(4px)' }}
+              />
+              {/* City name */}
+              <text
+                y={22}
+                textAnchor="middle"
+                fill={inDaylight ? '#fef3c7' : '#dbeafe'}
+                fontSize={10}
+                fontWeight="bold"
+                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}
+              >
+                {market.city}
+              </text>
+              {/* Local time */}
+              <text
+                y={33}
+                textAnchor="middle"
+                fill={inDaylight ? '#fde68a' : '#bfdbfe'}
+                fontSize={8}
+                fontFamily="monospace"
+                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}
+              >
+                {localTime}
+              </text>
+            </g>
+          )
+        })}
+      </svg>
 
       {/* UTC clock in corner */}
       <div className="absolute bottom-4 right-4 rounded-lg bg-black/40 px-3 py-2 backdrop-blur-sm">
