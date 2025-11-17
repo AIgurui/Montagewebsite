@@ -37,13 +37,13 @@ export default function Page() {
   return (
     <>
       <Section id="fertilizers-intro" eyebrow="Fertilizers" title="Integrated portfolio and market access">
-        <p className="text-lg text-neutral-700">
+        <p className="text-lg text-neutral-900">
           Full-line portfolio across nitrogen, phosphate, potash and key raw materials. From origination to delivery, we provide certainty in volatile markets.
         </p>
       </Section>
 
       {/* Urea - Main Annual Product */}
-      <section className="relative pb-12">
+      <section className="relative pb-8">
         <div className="container">
           <Link
             href="/marketing/fertilizers/urea"
@@ -52,7 +52,7 @@ export default function Page() {
             <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-brand-100/50 to-transparent" />
             <div className="relative">
               <h2 className="mb-4 text-5xl font-bold text-brand-900">Urea</h2>
-              <p className="mb-6 max-w-2xl text-xl text-neutral-700">
+              <p className="mb-6 max-w-2xl text-xl text-neutral-900">
                 46% nitrogen content. The world&apos;s most widely used solid nitrogen fertilizer.
                 Australian focus with direct origination from China, Indonesia, and Middle East.
               </p>
@@ -82,11 +82,11 @@ export default function Page() {
       </section>
 
       {/* Nitrogen */}
-      <section className="relative pb-12">
+      <section className="relative pb-8">
         <div className="container">
-          <div className="mb-6">
+          <div className="mb-4">
             <h3 className="text-2xl font-bold text-neutral-900">Nitrogen</h3>
-            <p className="text-neutral-600">Essential for protein synthesis and chlorophyll production</p>
+            <p className="text-neutral-900">Essential for protein synthesis and chlorophyll production</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {nitrogenProducts.map((product) => (
@@ -102,11 +102,11 @@ export default function Page() {
       </section>
 
       {/* Potash */}
-      <section className="relative pb-12">
+      <section className="relative pb-8">
         <div className="container">
-          <div className="mb-6">
+          <div className="mb-4">
             <h3 className="text-2xl font-bold text-neutral-900">Potash</h3>
-            <p className="text-neutral-600">Vital for water regulation and disease resistance</p>
+            <p className="text-neutral-900">Vital for water regulation and disease resistance</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {potashProducts.map((product) => (
@@ -122,11 +122,11 @@ export default function Page() {
       </section>
 
       {/* Phosphate */}
-      <section className="relative pb-20">
+      <section className="relative pb-12">
         <div className="container">
-          <div className="mb-6">
+          <div className="mb-4">
             <h3 className="text-2xl font-bold text-neutral-900">Phosphate</h3>
-            <p className="text-neutral-600">Critical for root development and energy transfer</p>
+            <p className="text-neutral-900">Critical for root development and energy transfer</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {phosphateProducts.map((product) => (

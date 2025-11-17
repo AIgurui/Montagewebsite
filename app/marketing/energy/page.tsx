@@ -17,10 +17,10 @@ export default function Page() {
   return (
     <>
       <Section eyebrow="Energy & Dry Bulk" title="Dry bulk commodities">
-        <p className="text-lg text-neutral-700 mb-4">
+        <p className="text-lg text-neutral-900 mb-4">
           Strategic sourcing and delivery of dry bulk materials including sulphur, petcoke, iron ore, and DRI. This represents a complementary portfolio alongside our core fertilizer operations.
         </p>
-        <p className="text-neutral-600">
+        <p className="text-neutral-900">
           For our complete product range including refined petroleum products, aviation fuels, and more, please see our{' '}
           <a
             href="/brochure.pdf"
@@ -34,11 +34,11 @@ export default function Page() {
       </Section>
 
       {/* Dry Bulk */}
-      <section className="relative pb-20">
+      <section className="relative pb-12">
         <div className="container">
-          <div className="mb-8">
+          <div className="mb-4">
             <h3 className="text-2xl font-bold text-neutral-900 mb-2">Product Range</h3>
-            <p className="text-neutral-600">Raw materials supporting industrial, agricultural, and steel production supply chains</p>
+            <p className="text-neutral-900">Raw materials supporting industrial, agricultural, and steel production supply chains</p>
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {dryBulkProducts.map((product) => {
