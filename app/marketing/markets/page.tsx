@@ -1,14 +1,5 @@
 import Section from '@/components/Section'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
-
-// Client-side only, no SSR for heavy map component
-const LiveMarketsMap = dynamic(() => import('@/components/LiveMarketsMap'), {
-  ssr: false,
-  loading: () => (
-    <div className="aspect-[16/9] w-full animate-pulse rounded-2xl bg-neutral-100" />
-  ),
-})
 
 export const metadata = {
   title: 'Markets We Serve',
@@ -19,29 +10,76 @@ export default function Page() {
   return (
     <>
       <Section id="markets" title="Markets We Serve" eyebrow="Global Reach">
-        <div className="space-y-6">
+        <div className="space-y-8">
           <p className="text-lg text-neutral-700">
-            Montage Oil operates across three strategic regions: Latin America, Africa, and Asia Pacific. We maintain direct origination relationships in China and Indonesia, with comprehensive coverage spanning these key markets.
+            Montage Oil operates across three strategic regions with a growing distribution network. We distribute north of 2 million tonnes of nitrogenous fertilizers annually and north of 1 million tonnes of phosphatic fertilizers, serving key markets through established logistics networks and flexible financing solutions.
           </p>
-          <p className="text-neutral-600">
-            The live map below highlights our operational footprint across all three regions, featuring Melbourne with real-time local time. Our regional presence ensures shipping certainty through established logistics networks and flexible financing tailored to local market conditions.
-          </p>
-        </div>
-      </Section>
 
-      <section className="pb-20">
-        <div className="container">
-          <LiveMarketsMap />
+          {/* Regional Sections */}
+          <div className="space-y-4">
+            {/* Latin America */}
+            <details className="group rounded-xl border border-neutral-200 bg-white overflow-hidden hover:border-brand-300 transition-colors">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold text-lg text-neutral-900 hover:bg-neutral-50 transition-colors">
+                <span>Latin America</span>
+                <svg
+                  className="h-5 w-5 text-neutral-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-4 pt-2 text-neutral-600 border-t border-neutral-100">
+                <p>
+                  In Latin America, we maintain a competitive presence across the region's agricultural markets. Our strategy focuses on competing aggressively with current incumbents through reliable supply chains, competitive pricing structures, and responsive customer service. We work with importers and distributors to ensure consistent availability of both nitrogenous and phosphatic fertilizers throughout key growing seasons.
+                </p>
+              </div>
+            </details>
 
-          {/* Accessibility text summary */}
-          <p className="sr-only">
-            Montage Oil operates across three strategic regions: Latin America, Africa, and Asia Pacific.
-            The map shows our operational footprint with regional color highlighting for each continent,
-            featuring Melbourne with real-time local time, and live day/night visualization based on the sun position.
-          </p>
+            {/* Africa */}
+            <details className="group rounded-xl border border-neutral-200 bg-white overflow-hidden hover:border-brand-300 transition-colors">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold text-lg text-neutral-900 hover:bg-neutral-50 transition-colors">
+                <span>Africa</span>
+                <svg
+                  className="h-5 w-5 text-neutral-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-4 pt-2 text-neutral-600 border-t border-neutral-100">
+                <p>
+                  Our African operations extend beyond traditional fertilizer distribution to include sulphur and energy products. This diversified portfolio allows us to serve agricultural, industrial, and energy sectors across the continent. We leverage regional partnerships and strategic storage locations to maintain supply reliability and respond to market demands across multiple product categories.
+                </p>
+              </div>
+            </details>
+
+            {/* Asia Pacific */}
+            <details className="group rounded-xl border border-neutral-200 bg-white overflow-hidden hover:border-brand-300 transition-colors">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold text-lg text-neutral-900 hover:bg-neutral-50 transition-colors">
+                <span>Asia Pacific</span>
+                <svg
+                  className="h-5 w-5 text-neutral-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-4 pt-2 text-neutral-600 border-t border-neutral-100">
+                <p>
+                  The Asia Pacific region represents a significant focus for our operations, where we distribute fertilizers alongside energy products including iron ore and related commodities. Our direct origination relationships enable efficient supply chains and competitive market positioning. We serve agricultural markets while supporting the region's growing industrial and energy sectors through strategic product diversification.
+                </p>
+              </div>
+            </details>
+          </div>
 
           {/* CTAs */}
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="https://calendly.com/zakiullah-montageoil/30min"
               target="_blank"
@@ -58,7 +96,7 @@ export default function Page() {
             </Link>
           </div>
         </div>
-      </section>
+      </Section>
     </>
   )
 }
