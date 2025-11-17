@@ -32,7 +32,7 @@ export default function Page() {
               </summary>
               <div className="px-6 pb-4 pt-2 text-neutral-600 border-t border-neutral-100">
                 <p>
-                  In Latin America, we maintain a competitive presence across the region's agricultural markets. Our strategy focuses on competing aggressively with current incumbents through reliable supply chains, competitive pricing structures, and responsive customer service. We work with importers and distributors to ensure consistent availability of both nitrogenous and phosphatic fertilizers throughout key growing seasons.
+                  In Latin America, we maintain a competitive presence across the region&apos;s agricultural markets. Our strategy focuses on competing aggressively with current incumbents through reliable supply chains, competitive pricing structures, and responsive customer service. We work with importers and distributors to ensure consistent availability of both nitrogenous and phosphatic fertilizers throughout key growing seasons.
                 </p>
               </div>
             </details>
@@ -72,7 +72,7 @@ export default function Page() {
               </summary>
               <div className="px-6 pb-4 pt-2 text-neutral-600 border-t border-neutral-100">
                 <p>
-                  The Asia Pacific region represents a significant focus for our operations, where we distribute fertilizers alongside energy products including iron ore and related commodities. Our direct origination relationships enable efficient supply chains and competitive market positioning. We serve agricultural markets while supporting the region's growing industrial and energy sectors through strategic product diversification.
+                  The Asia Pacific region represents a significant focus for our operations, where we distribute fertilizers alongside energy products including iron ore and related commodities. Our direct origination relationships enable efficient supply chains and competitive market positioning. We serve agricultural markets while supporting the region&apos;s growing industrial and energy sectors through strategic product diversification.
                 </p>
               </div>
             </details>
