@@ -8,9 +8,9 @@ export const metadata = {
 const dryBulkProducts = [
   { name: 'Sulphur', spec: 'Elemental sulphur for fertilizer production and industrial processes', category: 'Raw Materials' },
   { name: 'Petcoke', spec: 'Petroleum coke for fuel and industrial applications', category: 'Carbon Products' },
-  { name: 'DRI (Direct Reduced Iron)', spec: 'High-purity iron for steelmaking and metallurgical applications', category: 'Iron & Steel' },
-  { name: 'Iron Ore', spec: 'Iron ore fines and concentrates for steel production', category: 'Iron & Steel' },
+  { name: 'DRI-D', spec: 'Direct Reduced Iron - Grade D for premium steelmaking applications', category: 'Iron & Steel' },
   { name: 'Iron Ore Fines', spec: 'Fine-grade iron ore for blast furnace and pelletizing operations', category: 'Iron & Steel' },
+  { name: 'Iron Ores', spec: 'Iron ore concentrates and lump ore for steel production', category: 'Iron & Steel' },
 ]
 
 export default function Page() {
