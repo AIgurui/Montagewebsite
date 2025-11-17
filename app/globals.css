@@ -25,4 +25,4 @@ html { scroll-behavior: smooth; }
 
 /* Simple Prose */
 .prose-light h1, .prose-light h2, .prose-light h3 { @apply text-neutral-900 dark:text-white; }
-.prose-light p, .prose-light li { @apply text-neutral-700 dark:text-slate-300; }
+.prose-light p, .prose-light li { @apply text-neutral-900 dark:text-slate-300; }

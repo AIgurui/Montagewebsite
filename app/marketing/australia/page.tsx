@@ -22,7 +22,7 @@ export default function Page() {
         <div className="grid gap-6 md:grid-cols-2">
           <div>
             <h3 className="text-xl font-bold text-neutral-900 mb-3">Product Specifications</h3>
-            <ul className="space-y-2 text-neutral-700">
+            <ul className="space-y-2 text-neutral-900">
               <li className="flex items-start gap-2">
                 <span className="text-brand-600 font-bold">•</span>
                 <span><strong>Forms:</strong> Granular and Prilled Urea available</span>
@@ -43,7 +43,7 @@ export default function Page() {
           </div>
           <div>
             <h3 className="text-xl font-bold text-neutral-900 mb-3">Australian Applications</h3>
-            <ul className="space-y-2 text-neutral-700">
+            <ul className="space-y-2 text-neutral-900">
               <li className="flex items-start gap-2">
                 <span className="text-brand-600 font-bold">•</span>
                 <span><strong>Wheat:</strong> Optimal for major wheat-growing regions</span>
@@ -77,7 +77,7 @@ export default function Page() {
         title="Request Product Specifications"
         className="bg-neutral-50"
       >
-        <p className="text-lg text-neutral-700 mb-8 max-w-2xl">
+        <p className="text-lg text-neutral-900 mb-8 max-w-2xl">
           Leave your contact details and we&apos;ll send you detailed product specifications and discuss your seasonal program needs.
         </p>
         <form action="/api/contact" method="POST" className="max-w-xl">
@@ -152,14 +152,14 @@ export default function Page() {
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card">
             <div className="text-brand-600 font-bold mb-2">Product Specifications</div>
-            <p className="text-sm text-neutral-600 mb-4">Detailed technical specs, origin certificates, and quality parameters for urea products.</p>
+            <p className="text-sm text-neutral-900 mb-4">Detailed technical specs, origin certificates, and quality parameters for urea products.</p>
             <Link href="#contact-form" className="text-sm font-medium text-brand-600 hover:text-brand-700">
               Request Specs →
             </Link>
           </div>
           <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card">
             <div className="text-brand-600 font-bold mb-2">Full Product Portfolio</div>
-            <p className="text-sm text-neutral-600 mb-4">Complete fertilizer range including nitrogen, phosphate, and potash products.</p>
+            <p className="text-sm text-neutral-900 mb-4">Complete fertilizer range including nitrogen, phosphate, and potash products.</p>
             <a href="/brochure/Montage_Oil_DMCC_Company_Profile_2025.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-brand-600 hover:text-brand-700">
               Download Brochure →
             </a>

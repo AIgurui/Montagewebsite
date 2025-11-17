@@ -48,12 +48,12 @@ export default function Page() {
   return (
     <>
       <Section eyebrow="Capabilities" title="End-to-end commodity distribution">
-        <p className="text-lg text-neutral-700">
+        <p className="text-lg text-neutral-900">
           Integrated approach from origination to delivery. We manage the complete supply chain, allowing our partners to focus on their core operations while we handle complexity.
         </p>
       </Section>
 
-      <section className="relative pb-20">
+      <section className="relative pb-12">
         <div className="container">
           <div className="grid gap-8 md:gap-10">
             {capabilities.map((capability, index) => (
@@ -68,14 +68,14 @@ export default function Page() {
 
                 <div className="mb-4">
                   <h3 className="text-2xl font-bold text-neutral-900 mb-3">{capability.title}</h3>
-                  <p className="text-neutral-700">{capability.description}</p>
+                  <p className="text-neutral-900">{capability.description}</p>
                 </div>
 
                 <div className="space-y-2">
                   {capability.details.map((detail) => (
                     <div key={detail} className="flex items-start gap-3">
                       <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-600" />
-                      <p className="text-sm text-neutral-600">{detail}</p>
+                      <p className="text-sm text-neutral-900">{detail}</p>
                     </div>
                   ))}
                 </div>

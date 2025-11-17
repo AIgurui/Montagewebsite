@@ -10,7 +10,7 @@ export default function Page() {
     <>
       <Section eyebrow="Urea" title="Reliable supply, disciplined execution">
         <p>
-          Sources include OMIFCO (Oman), Algeria, and Nigeria. Logistics solutions cover bagged and bulk shipments with inland delivery where required. Pricing references align to major benchmarks; final commercial terms remain trade-specific.
+          We supply from a wide variety of trusted and high-quality origins in the Middle East, North Africa, and other strategic production centers. Logistics solutions cover bagged and bulk shipments with inland delivery where required. Pricing references align to major benchmarks; final commercial terms remain trade-specific.
         </p>
       </Section>
       <Section title="Markets">
