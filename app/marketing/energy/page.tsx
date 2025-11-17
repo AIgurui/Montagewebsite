@@ -54,7 +54,7 @@ export default function Page() {
                     </div>
                     <h4 className="text-lg font-semibold text-neutral-900">{product.name}</h4>
                   </div>
-                  <p className="text-sm text-neutral-600">{product.spec}</p>
+                  <p className="text-sm text-neutral-900">{product.spec}</p>
                 </div>
               )
             })}

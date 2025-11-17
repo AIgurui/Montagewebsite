@@ -59,15 +59,15 @@ export default function Page() {
               <div className="flex flex-wrap gap-3 mb-6">
                 <div className="rounded-lg bg-white/80 px-5 py-3 text-sm">
                   <div className="font-semibold text-brand-700 text-lg">46% N</div>
-                  <div className="text-xs text-neutral-600">Nitrogen content</div>
+                  <div className="text-xs text-neutral-700">Nitrogen content</div>
                 </div>
                 <div className="rounded-lg bg-white/80 px-5 py-3 text-sm">
                   <div className="font-semibold text-brand-700 text-lg">Prilled & Granular</div>
-                  <div className="text-xs text-neutral-600">Multiple forms</div>
+                  <div className="text-xs text-neutral-700">Multiple forms</div>
                 </div>
                 <div className="rounded-lg bg-white/80 px-5 py-3 text-sm">
                   <div className="font-semibold text-brand-700 text-lg">Australia Focus</div>
-                  <div className="text-xs text-neutral-600">Primary market</div>
+                  <div className="text-xs text-neutral-700">Primary market</div>
                 </div>
               </div>
               <div className="inline-flex items-center gap-2 text-brand-600 font-semibold text-lg group-hover:gap-3 transition-all">
@@ -93,7 +93,7 @@ export default function Page() {
               <div key={product.name} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-teal-300">
                 <div className="mb-3">
                   <h4 className="text-lg font-semibold text-neutral-900 mb-2">{product.name}</h4>
-                  <p className="text-sm text-neutral-600">{product.desc}</p>
+                  <p className="text-sm text-neutral-900">{product.desc}</p>
                 </div>
               </div>
             ))}
@@ -113,7 +113,7 @@ export default function Page() {
               <div key={product.name} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-indigo-300">
                 <div className="mb-3">
                   <h4 className="text-lg font-semibold text-neutral-900 mb-2">{product.name}</h4>
-                  <p className="text-sm text-neutral-600">{product.desc}</p>
+                  <p className="text-sm text-neutral-900">{product.desc}</p>
                 </div>
               </div>
             ))}
@@ -133,7 +133,7 @@ export default function Page() {
               <div key={product.name} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-amber-300">
                 <div className="mb-3">
                   <h4 className="text-lg font-semibold text-neutral-900 mb-2">{product.name}</h4>
-                  <p className="text-sm text-neutral-600">{product.desc}</p>
+                  <p className="text-sm text-neutral-900">{product.desc}</p>
                 </div>
               </div>
             ))}
