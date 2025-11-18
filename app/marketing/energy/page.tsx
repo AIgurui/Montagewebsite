@@ -43,7 +43,7 @@ export default function Page() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {dryBulkProducts.map((product) => {
               const isIronSteel = product.category === 'Iron & Steel'
-              const badgeColor = isIronSteel ? 'bg-slate-50 text-slate-700' : 'bg-amber-50 text-amber-700'
+              const badgeColor = isIronSteel ? 'bg-slate-50 text-neutral-900' : 'bg-amber-50 text-amber-700'
               const borderColor = isIronSteel ? 'hover:border-slate-300' : 'hover:border-amber-300'
 
               return (
@@ -64,4 +64,3 @@ export default function Page() {
     </>
   )
 }
-

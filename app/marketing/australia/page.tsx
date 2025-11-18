@@ -97,7 +97,7 @@ export default function Page() {
             </div>
             <div>
               <label htmlFor="whatsapp" className="block text-sm font-medium text-neutral-900 mb-1">
-                WhatsApp Number <span className="text-neutral-500">(optional)</span>
+                WhatsApp Number <span className="text-neutral-900">(optional)</span>
               </label>
               <input
                 type="tel"
@@ -109,7 +109,7 @@ export default function Page() {
             </div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-neutral-900 mb-1">
-                Company Name <span className="text-neutral-500">(optional)</span>
+                Company Name <span className="text-neutral-900">(optional)</span>
               </label>
               <input
                 type="text"
@@ -121,7 +121,7 @@ export default function Page() {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-neutral-900 mb-1">
-                Message <span className="text-neutral-500">(optional)</span>
+                Message <span className="text-neutral-900">(optional)</span>
               </label>
               <textarea
                 id="message"

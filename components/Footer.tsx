@@ -4,7 +4,7 @@ import { site } from '@/lib/config'
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="border-t border-neutral-200 bg-white py-10 text-sm text-neutral-600">
+    <footer className="border-t border-neutral-200 bg-white py-10 text-sm text-neutral-900">
       <div className="container flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <p>© {year} {site.name}. All rights reserved.</p>
         <div className="flex items-center gap-5">

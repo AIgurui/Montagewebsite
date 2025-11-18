@@ -42,7 +42,7 @@ export default function SupplyChainAdvantages() {
       nextId="partnership"
       className="bg-neutral-50"
     >
-      <p className="text-lg text-neutral-700 mb-8 max-w-3xl">
+      <p className="text-lg text-neutral-900 mb-8 max-w-3xl">
         Our consignment model and Dubai hub positioning deliver unmatched flexibility for Australian agricultural operations. Built on proven experience from Mexico, Ethiopia, and Latin American markets.
       </p>
 
@@ -51,7 +51,7 @@ export default function SupplyChainAdvantages() {
           <div key={adv.title} className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card hover:shadow-lg transition-shadow">
             <div className="text-4xl mb-3">{adv.icon}</div>
             <h3 className="text-lg font-bold text-neutral-900 mb-2">{adv.title}</h3>
-            <p className="text-sm text-neutral-600 leading-relaxed">{adv.description}</p>
+            <p className="text-sm text-neutral-900 leading-relaxed">{adv.description}</p>
           </div>
         ))}
       </div>

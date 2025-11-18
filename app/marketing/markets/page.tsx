@@ -22,7 +22,7 @@ export default function Page() {
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold text-lg text-neutral-900 hover:bg-neutral-50 transition-colors">
                 <span>Latin America</span>
                 <svg
-                  className="h-5 w-5 text-neutral-500 transition-transform group-open:rotate-180"
+                  className="h-5 w-5 text-neutral-900 transition-transform group-open:rotate-180"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -42,7 +42,7 @@ export default function Page() {
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold text-lg text-neutral-900 hover:bg-neutral-50 transition-colors">
                 <span>Africa</span>
                 <svg
-                  className="h-5 w-5 text-neutral-500 transition-transform group-open:rotate-180"
+                  className="h-5 w-5 text-neutral-900 transition-transform group-open:rotate-180"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -62,7 +62,7 @@ export default function Page() {
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold text-lg text-neutral-900 hover:bg-neutral-50 transition-colors">
                 <span>Asia Pacific</span>
                 <svg
-                  className="h-5 w-5 text-neutral-500 transition-transform group-open:rotate-180"
+                  className="h-5 w-5 text-neutral-900 transition-transform group-open:rotate-180"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

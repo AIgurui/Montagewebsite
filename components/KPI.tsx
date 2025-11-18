@@ -14,7 +14,7 @@ export default function KPI({ id = 'kpi', nextId = 'positioning' }: { id?: strin
           {items.map((i) => (
             <div key={i.t} className="rounded-xl border border-neutral-200 bg-white p-5 text-center shadow-card">
               <div className="text-2xl font-black text-neutral-900">{i.k}</div>
-              <div className="text-neutral-600">{i.t}</div>
+              <div className="text-neutral-900">{i.t}</div>
             </div>
           ))}
         </div>

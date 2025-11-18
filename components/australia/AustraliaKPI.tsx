@@ -20,7 +20,7 @@ export default function AustraliaKPI() {
             <div key={i.t} className="rounded-xl border border-neutral-200 bg-white p-6 text-center shadow-card hover:shadow-lg transition-shadow">
               <div className="text-3xl font-black text-brand-600">{i.k}</div>
               <div className="text-base font-semibold text-neutral-900 mt-2">{i.t}</div>
-              <div className="text-sm text-neutral-600 mt-1">{i.desc}</div>
+              <div className="text-sm text-neutral-900 mt-1">{i.desc}</div>
             </div>
           ))}
         </div>

@@ -5,7 +5,7 @@
 :root{
   --brand-600:#1b4f91; --brand-700:#153e73; --brand-800:#0f2d56;
   --accent-500:#14b8a6;
-  --ink:#0b1220; --muted:#6b7280; --line:#e5e7eb; --surface:#f9fafb; --white:#fff;
+  --ink:#000000; --muted:#6b7280; --line:#e5e7eb; --surface:#f9fafb; --white:#fff;
   --focus:#6d9fca;
 }
 .dark{

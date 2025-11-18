@@ -59,15 +59,15 @@ export default function Page() {
               <div className="flex flex-wrap gap-3 mb-6">
                 <div className="rounded-lg bg-white/80 px-5 py-3 text-sm">
                   <div className="font-semibold text-brand-700 text-lg">46% N</div>
-                  <div className="text-xs text-neutral-700">Nitrogen content</div>
+                  <div className="text-xs text-neutral-900">Nitrogen content</div>
                 </div>
                 <div className="rounded-lg bg-white/80 px-5 py-3 text-sm">
                   <div className="font-semibold text-brand-700 text-lg">Prilled & Granular</div>
-                  <div className="text-xs text-neutral-700">Multiple forms</div>
+                  <div className="text-xs text-neutral-900">Multiple forms</div>
                 </div>
                 <div className="rounded-lg bg-white/80 px-5 py-3 text-sm">
                   <div className="font-semibold text-brand-700 text-lg">Australia Focus</div>
-                  <div className="text-xs text-neutral-700">Primary market</div>
+                  <div className="text-xs text-neutral-900">Primary market</div>
                 </div>
               </div>
               <div className="inline-flex items-center gap-2 text-brand-600 font-semibold text-lg group-hover:gap-3 transition-all">
@@ -143,4 +143,3 @@ export default function Page() {
     </>
   )
 }
-

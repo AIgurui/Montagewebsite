@@ -25,7 +25,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className={l.featured ? "text-sm font-semibold text-brand-600 hover:text-brand-700" : "text-sm text-neutral-700 hover:text-brand-700"}
+              className={l.featured ? "text-sm font-semibold text-brand-600 hover:text-brand-700" : "text-sm text-neutral-900 hover:text-brand-700"}
             >
               {l.label}
             </Link>
