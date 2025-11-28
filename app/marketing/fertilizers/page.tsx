@@ -7,30 +7,30 @@ export const metadata = {
 }
 
 const nitrogenProducts = [
-  { name: 'Ammonium Sulphate', desc: '21% nitrogen, 24% sulphur for efficient crop nutrition' },
-  { name: 'Ammonium Nitrate', desc: 'High nitrogen content for rapid crop response' },
-  { name: 'LD Ammonium Nitrate', desc: 'Low density formulation for specialized applications' },
-  { name: 'CAN', desc: 'Calcium Ammonium Nitrate - nitrogen with calcium for soil health' },
-  { name: 'UAN', desc: 'Urea Ammonium Nitrate solution for liquid applications' },
-  { name: 'NPK', desc: 'Balanced nitrogen-phosphorus-potassium compound fertilizers' },
-  { name: 'Ammonia', desc: '82% nitrogen, foundational feedstock for nitrogen fertilizers' },
-  { name: 'Sulphur', desc: 'Essential nutrient and raw material for fertilizer production' },
-  { name: 'Sulfuric Acid', desc: 'Key raw material for phosphate fertilizer manufacturing' },
+  'Ammonium Sulphate',
+  'Ammonium Nitrate',
+  'LD Ammonium Nitrate',
+  'CAN',
+  'UAN',
+  'NPK',
+  'Ammonia',
+  'Sulphur',
+  'Sulfuric Acid',
 ]
 
 const potashProducts = [
-  { name: 'MOP', desc: 'Muriate of Potash - high potassium chloride content' },
-  { name: 'SOP', desc: 'Sulphate of Potash - premium chloride-free potassium' },
+  'MOP',
+  'SOP',
 ]
 
 const phosphateProducts = [
-  { name: 'MAP', desc: 'Monoammonium Phosphate - 11-52-0 NPK ratio' },
-  { name: 'DAP', desc: 'Diammonium Phosphate - 18-46-0 NPK ratio' },
-  { name: 'TSP', desc: 'Triple Superphosphate - concentrated phosphorus source' },
-  { name: 'SSP', desc: 'Single Superphosphate - phosphorus with sulphur' },
-  { name: 'NPs', desc: 'Nitrogen-Phosphorus compound fertilizers' },
-  { name: 'Phosphate Rock', desc: 'Raw material for phosphate fertilizer production' },
-  { name: 'Phosphoric Acid', desc: 'Key intermediate for phosphate fertilizers' },
+  'MAP',
+  'DAP',
+  'TSP',
+  'SSP',
+  'NPs',
+  'Phosphate Rock',
+  'Phosphoric Acid',
 ]
 
 export default function Page() {
@@ -53,23 +53,8 @@ export default function Page() {
             <div className="relative">
               <h2 className="mb-4 text-5xl font-bold text-brand-900">Urea</h2>
               <p className="mb-6 max-w-2xl text-xl text-neutral-900">
-                46% nitrogen content. The world&apos;s most widely used solid nitrogen fertilizer.
-                Australian focus with direct origination from China, Indonesia, and Middle East.
+                The world&apos;s most widely used solid nitrogen fertilizer.
               </p>
-              <div className="flex flex-wrap gap-3 mb-6">
-                <div className="rounded-lg bg-white/80 px-5 py-3 text-sm">
-                  <div className="font-semibold text-brand-700 text-lg">46% N</div>
-                  <div className="text-xs text-neutral-900">Nitrogen content</div>
-                </div>
-                <div className="rounded-lg bg-white/80 px-5 py-3 text-sm">
-                  <div className="font-semibold text-brand-700 text-lg">Prilled & Granular</div>
-                  <div className="text-xs text-neutral-900">Multiple forms</div>
-                </div>
-                <div className="rounded-lg bg-white/80 px-5 py-3 text-sm">
-                  <div className="font-semibold text-brand-700 text-lg">Australia Focus</div>
-                  <div className="text-xs text-neutral-900">Primary market</div>
-                </div>
-              </div>
               <div className="inline-flex items-center gap-2 text-brand-600 font-semibold text-lg group-hover:gap-3 transition-all">
                 Explore Urea Program
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -90,11 +75,8 @@ export default function Page() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {nitrogenProducts.map((product) => (
-              <div key={product.name} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-teal-300">
-                <div className="mb-3">
-                  <h4 className="text-lg font-semibold text-neutral-900 mb-2">{product.name}</h4>
-                  <p className="text-sm text-neutral-900">{product.desc}</p>
-                </div>
+              <div key={product} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-teal-300">
+                <h4 className="text-lg font-semibold text-neutral-900">{product}</h4>
               </div>
             ))}
           </div>
@@ -110,11 +92,8 @@ export default function Page() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {potashProducts.map((product) => (
-              <div key={product.name} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-indigo-300">
-                <div className="mb-3">
-                  <h4 className="text-lg font-semibold text-neutral-900 mb-2">{product.name}</h4>
-                  <p className="text-sm text-neutral-900">{product.desc}</p>
-                </div>
+              <div key={product} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-indigo-300">
+                <h4 className="text-lg font-semibold text-neutral-900">{product}</h4>
               </div>
             ))}
           </div>
@@ -130,11 +109,8 @@ export default function Page() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {phosphateProducts.map((product) => (
-              <div key={product.name} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-amber-300">
-                <div className="mb-3">
-                  <h4 className="text-lg font-semibold text-neutral-900 mb-2">{product.name}</h4>
-                  <p className="text-sm text-neutral-900">{product.desc}</p>
-                </div>
+              <div key={product} className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-amber-300">
+                <h4 className="text-lg font-semibold text-neutral-900">{product}</h4>
               </div>
             ))}
           </div>
