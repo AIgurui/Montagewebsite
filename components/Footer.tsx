@@ -13,6 +13,7 @@ export default function Footer() {
           <Link href="/marketing/privacy" className="hover:text-brand-700">Privacy Policy</Link>
           <Link href="/marketing/terms" className="hover:text-brand-700">Terms of Use</Link>
           <Link href="/marketing/supplier-code" className="hover:text-brand-700">Supplier Code</Link>
+          <Link href="/marketing/whistleblower" className="hover:text-brand-700">Whistleblower</Link>
           <Link href="/safety" className="hover:text-brand-700">Safety & Compliance</Link>
         </div>
       </div>
