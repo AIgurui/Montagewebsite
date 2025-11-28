@@ -19,7 +19,7 @@ export default function Page() {
         <p>
           We manage complex supply chains and combine a global network with outstanding local execution. Our integrated solutions and partnership mindset deliver tailor-made market access and best-in-class service.
         </p>
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap gap-3 justify-start">
           <Link href="/marketing/fertilizers" className="rounded-full border border-white/15 px-5 py-3 font-medium text-white">Fertilizers Hub</Link>
           <Link href="/marketing/contact" className="rounded-full bg-brand px-5 py-3 font-medium text-black">Contact</Link>
         </div>

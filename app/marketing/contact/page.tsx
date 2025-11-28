@@ -1,5 +1,4 @@
 import Section from '@/components/Section'
-import Image from 'next/image'
 import { site } from '@/lib/config'
 
 export const metadata = { title: 'Contact' }
@@ -31,15 +30,8 @@ export default function Page() {
           </div>
           <div className="space-y-2 text-slate-300">
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <div className="font-semibold text-white">Address</div>
-              <div>{site.address}</div>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
               <div className="font-semibold text-white">Email</div>
               <a className="text-brand" href={`mailto:${site.email}`}>{site.email}</a>
-            </div>
-            <div className="relative h-48 w-full overflow-hidden rounded-xl border border-white/10">
-              <Image alt="Map placeholder" src="/map.png" fill className="object-cover" />
             </div>
           </div>
         </div>
