@@ -8,17 +8,17 @@ export default function KPI({ id = 'kpi', nextId = 'positioning' }: { id?: strin
     { k: 'Zero', t: 'Tolerance on Risk' },
   ]
   return (
-    <section id={id} className="relative bg-neutral-50 py-8">
-      <div className="container">
+    <section id={id} className="relative bg-neutral-50 py-6 sm:py-8">
+      <div className="container px-4 sm:px-6">
         <div className="grid gap-3 sm:grid-cols-3">
           {items.map((i) => (
-            <div key={i.t} className="rounded-xl border border-neutral-200 bg-white p-5 text-center shadow-card">
-              <div className="text-2xl font-black text-neutral-900">{i.k}</div>
-              <div className="text-neutral-900">{i.t}</div>
+            <div key={i.t} className="rounded-lg sm:rounded-xl border border-neutral-200 bg-white p-4 sm:p-5 text-center shadow-card">
+              <div className="text-xl sm:text-2xl font-black text-neutral-900">{i.k}</div>
+              <div className="text-sm sm:text-base text-neutral-900">{i.t}</div>
             </div>
           ))}
         </div>
-        <div className="mt-6 text-center">
+        <div className="mt-5 sm:mt-6 text-center">
           <Link
             href="/marketing/markets"
             className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors"
