@@ -152,10 +152,10 @@ export default function Page() {
       </Section>
 
       <Section id="copyright-notice" className="bg-neutral-50">
-        <p className="text-sm text-neutral-600">
+        <p className="text-sm !text-black">
           © Copyright Montage. All rights reserved.
         </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        <p className="text-sm !text-black mt-2">
           Version 1 – November 2025
         </p>
       </Section>

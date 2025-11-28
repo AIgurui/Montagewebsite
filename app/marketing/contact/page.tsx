@@ -11,7 +11,7 @@ export default function Page() {
           <div className="md:col-span-2">
             <div className="rounded-lg sm:rounded-xl border border-white/10 bg-white/5 p-5 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Get in Touch</h3>
-              <p className="text-sm sm:text-base text-slate-300 mb-5 sm:mb-6">
+              <p className="text-sm sm:text-base !text-black mb-5 sm:mb-6">
                 Message us on WhatsApp for quick responses and direct communication.
               </p>
               <a
@@ -25,10 +25,10 @@ export default function Page() {
                 </svg>
                 Chat on WhatsApp
               </a>
-              <p className="text-xs text-slate-400 mt-3 sm:mt-4">We respond within one business day.</p>
+              <p className="text-xs !text-black mt-3 sm:mt-4">We respond within one business day.</p>
             </div>
           </div>
-          <div className="space-y-2 text-slate-300">
+          <div className="space-y-2 !text-black">
             <div className="rounded-lg sm:rounded-xl border border-white/10 bg-white/5 p-3 sm:p-4">
               <div className="text-sm sm:text-base font-semibold text-white">Email</div>
               <a className="text-brand text-sm sm:text-base break-all" href={`mailto:${site.email}`}>{site.email}</a>

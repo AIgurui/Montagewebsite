@@ -210,7 +210,7 @@ export default function Page() {
       </Section>
 
       <Section id="version">
-        <p className="text-sm text-neutral-600">
+        <p className="text-sm !text-black">
           This version of the Montage Privacy Policy is dated November 2025.
         </p>
       </Section>

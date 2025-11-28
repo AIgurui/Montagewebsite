@@ -159,7 +159,7 @@ export default function Page() {
           <div className="p-6 bg-neutral-50 rounded-lg border border-neutral-200">
             <p className="font-semibold !text-black mb-1">Compliance Team</p>
             <p className="!text-black">Email: <a href="mailto:compliance@montagefert.com" className="text-brand-600 hover:text-brand-700 font-semibold">compliance@montagefert.com</a></p>
-            <p className="text-sm text-neutral-600 mt-2">This is the primary channel for reporting modern slavery concerns.</p>
+            <p className="text-sm !text-black mt-2">This is the primary channel for reporting modern slavery concerns.</p>
           </div>
 
           <div className="p-6 bg-neutral-50 rounded-lg border border-neutral-200">

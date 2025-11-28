@@ -202,7 +202,7 @@ export default function Page() {
           <p><strong>Owner:</strong> Montage</p>
           <p><strong>Review Cycle:</strong> Annual</p>
         </div>
-        <p className="text-sm text-neutral-600 mt-6">
+        <p className="text-sm !text-black mt-6">
           This Code may be amended from time to time. The current version will always be available from Montage upon request.
         </p>
       </Section>
