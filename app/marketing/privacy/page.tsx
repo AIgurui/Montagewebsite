@@ -16,7 +16,7 @@ export default function Page() {
           Montage operates in accordance with the United Arab Emirates Federal Decree-Law No. 45 of 2021 on Personal Data Protection and its implementing regulations. This privacy policy outlines the personal information Montage may collect from you and how we handle that information.
         </p>
         <p className="text-neutral-900 mb-4">
-          References to "Montage", "we", "us" or "our" mean Montage, a company registered with the Dubai Multi Commodities Centre (DMCC), and any of its related companies or affiliates.
+          References to &ldquo;Montage&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo; mean Montage, a company registered with the Dubai Multi Commodities Centre (DMCC), and any of its related companies or affiliates.
         </p>
         <p className="text-neutral-900">
           Montage will only collect, use, disclose or store personal information in accordance with applicable UAE data protection laws and this privacy policy.
