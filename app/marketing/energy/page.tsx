@@ -17,10 +17,10 @@ export default function Page() {
   return (
     <>
       <Section eyebrow="Energy & Dry Bulk" title="Dry bulk commodities">
-        <p className="text-lg text-neutral-900 mb-4">
+        <p className="text-lg !text-black mb-4">
           Strategic sourcing and delivery of dry bulk materials including sulphur, petcoke, iron ore, and DRI. This represents a complementary portfolio alongside our core fertilizer operations.
         </p>
-        <p className="text-neutral-900">
+        <p className="!text-black">
           For our complete product range including refined petroleum products, aviation fuels, and more, please see our{' '}
           <a
             href="/brochure/Montage_Products.pdf"
@@ -37,13 +37,13 @@ export default function Page() {
       <section className="relative pb-12">
         <div className="container">
           <div className="mb-4">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-2">Product Range</h3>
-            <p className="text-neutral-900">Raw materials supporting industrial, agricultural, and steel production supply chains</p>
+            <h3 className="text-2xl font-bold !text-black mb-2">Product Range</h3>
+            <p className="!text-black">Raw materials supporting industrial, agricultural, and steel production supply chains</p>
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {dryBulkProducts.map((product) => {
               const isIronSteel = product.category === 'Iron & Steel'
-              const badgeColor = isIronSteel ? 'bg-slate-50 text-neutral-900' : 'bg-amber-50 text-amber-700'
+              const badgeColor = isIronSteel ? 'bg-slate-50 !text-black' : 'bg-amber-50 text-amber-700'
               const borderColor = isIronSteel ? 'hover:border-slate-300' : 'hover:border-amber-300'
 
               return (
@@ -52,9 +52,9 @@ export default function Page() {
                     <div className={`mb-2 inline-block rounded-md px-3 py-1 text-xs font-medium ${badgeColor}`}>
                       {product.category}
                     </div>
-                    <h4 className="text-lg font-semibold text-neutral-900">{product.name}</h4>
+                    <h4 className="text-lg font-semibold !text-black">{product.name}</h4>
                   </div>
-                  <p className="text-sm text-neutral-900">{product.spec}</p>
+                  <p className="text-sm !text-black">{product.spec}</p>
                 </div>
               )
             })}

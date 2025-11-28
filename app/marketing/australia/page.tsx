@@ -20,7 +20,7 @@ export default function Page() {
         title="Contact Our Australia Team"
         className="bg-neutral-50"
       >
-        <p className="text-base sm:text-lg text-neutral-900 mb-6 sm:mb-8 max-w-2xl">
+        <p className="text-base sm:text-lg !text-black mb-6 sm:mb-8 max-w-2xl">
           Message us on WhatsApp to discuss your seasonal program needs.
         </p>
         <a

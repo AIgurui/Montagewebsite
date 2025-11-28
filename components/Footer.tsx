@@ -14,7 +14,7 @@ export default function Footer() {
           <Link href="/marketing/terms" className="hover:text-brand-700 transition-colors">Terms of Use</Link>
           <Link href="/marketing/supplier-code" className="hover:text-brand-700 transition-colors">Supplier Code</Link>
           <Link href="/marketing/whistleblower" className="hover:text-brand-700 transition-colors">Whistleblower</Link>
-          <Link href="/marketing/modern-slavery" className="hover:text-brand-700 transition-colors">Modern Slavery</Link>
+          <Link href="/marketing/modern-slavery" className="hover:text-brand-700 transition-colors">Modern Slavery Statement</Link>
         </div>
       </div>
     </footer>
