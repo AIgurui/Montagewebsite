@@ -15,8 +15,8 @@ export default function Header() {
       <div className="container flex items-center justify-between py-3">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-3 font-bold tracking-tight text-neutral-900">
-            <Image src="/montage-oil-logo.png" alt="Montage Oil" width={132} height={28} className="h-7 w-auto" />
-            <span className="sr-only">Montage Oil DMCC</span>
+            <Image src="/montage-oil-logo.png" alt="Montage" width={132} height={28} className="h-7 w-auto" />
+            <span className="sr-only">Montage</span>
           </Link>
           <nav className="hidden gap-6 md:flex">
             {links.map((l) => (

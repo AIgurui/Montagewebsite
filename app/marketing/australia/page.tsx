@@ -6,7 +6,7 @@ import { ButtonPrimary, ButtonSecondary } from '@/components/Button'
 
 export const metadata = {
   title: 'Australia Market - Urea Supply',
-  description: 'Montage Oil brings urea to Australian agriculture. Flexible consignment programs tailored to your seasonal needs.',
+  description: 'Montage brings urea to Australian agriculture. Flexible consignment programs tailored to your seasonal needs.',
 }
 
 export default function Page() {
@@ -65,7 +65,7 @@ export default function Page() {
         </div>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="#contact-form"><ButtonPrimary>Request Specifications</ButtonPrimary></Link>
-          <a href="/brochure/Montage_Oil_DMCC_Company_Profile_2025.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/brochure/Montage_Company_Profile_2025.pdf" target="_blank" rel="noopener noreferrer">
             <ButtonSecondary>View Full Product Portfolio</ButtonSecondary>
           </a>
         </div>
@@ -160,7 +160,7 @@ export default function Page() {
           <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card">
             <div className="text-brand-600 font-bold mb-2">Full Product Portfolio</div>
             <p className="text-sm text-neutral-900 mb-4">Complete fertilizer range including nitrogen, phosphate, and potash products.</p>
-            <a href="/brochure/Montage_Oil_DMCC_Company_Profile_2025.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-brand-600 hover:text-brand-700">
+            <a href="/brochure/Montage_Company_Profile_2025.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-brand-600 hover:text-brand-700">
               Download Brochure →
             </a>
           </div>

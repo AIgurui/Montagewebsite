@@ -1,5 +1,5 @@
 export const site = {
-  name: 'Montage Oil DMCC',
+  name: 'Montage',
   tagline: 'Global trading with local execution',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://montageoil.com',
   twitter: '@montageoil',

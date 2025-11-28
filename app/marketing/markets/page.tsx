@@ -12,7 +12,7 @@ export default function Page() {
       <Section id="markets" title="Markets We Serve" eyebrow="Global Reach">
         <div className="space-y-6">
           <p className="text-lg text-neutral-900">
-            Montage Oil operates across three strategic regions with a growing distribution network. We distribute north of 2 million tonnes of nitrogenous fertilizers annually and north of 1 million tonnes of phosphatic fertilizers, serving key markets through established logistics networks and flexible financing solutions.
+            Montage operates across three strategic regions with a growing distribution network. We distribute north of 2 million tonnes of nitrogenous fertilizers annually and north of 1 million tonnes of phosphatic fertilizers, serving key markets through established logistics networks and flexible financing solutions.
           </p>
 
           {/* Regional Sections */}
