@@ -10,7 +10,7 @@ export default function Page() {
       <Section eyebrow="Contact" title="Let’s build a trade together">
         <div className="grid gap-6 md:grid-cols-3">
           <div className="md:col-span-2">
-            <form action="/api/contact" method="post" className="grid gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
+            <form action="mailto:docs@montageoil.com" method="GET" className="grid gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
               <input type="text" name="name" placeholder="Name" required className="rounded-md border border-white/10 bg-black/40 p-3" />
               <input type="email" name="email" placeholder="Email" required className="rounded-md border border-white/10 bg-black/40 p-3" />
               <input type="text" name="company" placeholder="Company" className="rounded-md border border-white/10 bg-black/40 p-3" />

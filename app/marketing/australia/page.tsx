@@ -33,7 +33,7 @@ export default function Page() {
         <p className="text-lg text-neutral-900 mb-8 max-w-2xl">
           Leave your contact details and we&apos;ll discuss your seasonal program needs.
         </p>
-        <form action="/api/contact" method="POST" className="max-w-xl">
+        <form action="mailto:docs@montageoil.com" method="GET" className="max-w-xl">
           <div className="space-y-4">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-neutral-900 mb-1">
