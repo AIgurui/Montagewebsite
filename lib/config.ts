@@ -3,7 +3,7 @@ export const site = {
   tagline: 'Global trading with local execution',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://montagefert.com',
   twitter: '@montageoil',
-  email: 'info@montageoil.com',
+  email: 'Admin@montagefert.com',
   address: 'Dubai, UAE',
 }
 

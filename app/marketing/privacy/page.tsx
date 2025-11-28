@@ -198,7 +198,7 @@ export default function Page() {
             <p>Jumeirah Lake Towers, Cluster E</p>
             <p>Dubai, United Arab Emirates</p>
             <p className="mt-2">Tel: +971 4 240 6453</p>
-            <p>Email: <a href="mailto:docs@montageoil.com" className="text-brand-600 hover:text-brand-700">docs@montageoil.com</a></p>
+            <p>Email: <a href="mailto:Admin@montagefert.com" className="text-brand-600 hover:text-brand-700">Admin@montagefert.com</a></p>
           </div>
         </div>
       </Section>
