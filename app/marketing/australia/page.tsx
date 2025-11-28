@@ -58,7 +58,14 @@ export default function Page() {
             </svg>
             Book a Meeting
           </a>
-          <Link href="/marketing/contact" className="w-full sm:w-auto"><ButtonSecondary className="w-full sm:w-auto">Send a Message</ButtonSecondary></Link>
+          <a
+            href="https://wa.me/6593914013"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-neutral-300 text-brand-700 bg-white hover:bg-neutral-50 px-5 py-3 transition-colors w-full sm:w-auto"
+          >
+            Send a Message
+          </a>
           <Link href="/marketing/fertilizers" className="w-full sm:w-auto"><ButtonSecondary className="w-full sm:w-auto">Explore All Fertilizers</ButtonSecondary></Link>
         </div>
       </Section>
