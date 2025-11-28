@@ -10,6 +10,7 @@ export default function Footer() {
         <div className="flex items-center gap-5">
           <Link href="/marketing/contact" className="hover:text-brand-700">Contact</Link>
           <a href="/brochure/Montage_Products.pdf" className="hover:text-brand-700" target="_blank">Company Brochure</a>
+          <Link href="/marketing/privacy" className="hover:text-brand-700">Privacy Policy</Link>
           <Link href="/safety" className="hover:text-brand-700">Safety & Compliance</Link>
         </div>
       </div>
