@@ -12,6 +12,7 @@ export default function Footer() {
           <a href="/brochure/Montage_Products.pdf" className="hover:text-brand-700" target="_blank">Company Brochure</a>
           <Link href="/marketing/privacy" className="hover:text-brand-700">Privacy Policy</Link>
           <Link href="/marketing/terms" className="hover:text-brand-700">Terms of Use</Link>
+          <Link href="/marketing/supplier-code" className="hover:text-brand-700">Supplier Code</Link>
           <Link href="/safety" className="hover:text-brand-700">Safety & Compliance</Link>
         </div>
       </div>
