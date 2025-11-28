@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 export default function KPI({ id = 'kpi', nextId = 'positioning' }: { id?: string; nextId?: string }) {
   const items = [
-    { k: '1M+', t: 'Phosphates Traded' },
+    { k: '1M+ MT', t: 'Phosphates Traded' },
     { k: '+15', t: 'Markets Served' },
-    { k: '2M+', t: 'Nitrogen Traded' },
+    { k: '2M+ MT', t: 'Nitrogen Traded' },
   ]
   return (
     <section id={id} className="relative bg-neutral-50 py-6 sm:py-8">
