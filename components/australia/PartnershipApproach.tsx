@@ -88,7 +88,7 @@ export default function PartnershipApproach() {
           <div className="rounded-xl bg-neutral-900 text-white p-8">
             <h3 className="text-xl font-bold mb-3">Ready to explore partnership options?</h3>
             <p className="text-white/80 mb-6">
-              Let&apos;s discuss how our Australian program can support your fertilizer requirements for the 2026 season and beyond.
+              Let&apos;s discuss how our Australian program can support your fertilizer requirements.
             </p>
             <div className="flex flex-wrap gap-3">
               <a

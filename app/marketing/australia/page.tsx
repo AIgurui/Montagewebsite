@@ -16,69 +16,22 @@ export default function Page() {
 
       <Section
         id="urea-focus"
-        eyebrow="Australia 2026"
+        eyebrow="Australia"
         title="Urea for Australian Agriculture"
       >
-        <div className="grid gap-6 md:grid-cols-2">
-          <div>
-            <h3 className="text-xl font-bold text-neutral-900 mb-3">Product Specifications</h3>
-            <ul className="space-y-2 text-neutral-900">
-              <li className="flex items-start gap-2">
-                <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Forms:</strong> Granular and Prilled Urea available</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Origin:</strong> Direct from established producers (OMIFCO, Fertiglobe)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Nitrogen Content:</strong> 46% minimum</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Quality:</strong> Full origin certificates and quality parameters provided</span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-neutral-900 mb-3">Australian Applications</h3>
-            <ul className="space-y-2 text-neutral-900">
-              <li className="flex items-start gap-2">
-                <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Wheat:</strong> Optimal for major wheat-growing regions</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Canola:</strong> Ideal nitrogen source for canola production</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Cotton:</strong> Proven performance in cotton-growing areas</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand-600 font-bold">•</span>
-                <span><strong>Seasonal Timing:</strong> Programs aligned with Australian agricultural calendar</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link href="#contact-form"><ButtonPrimary>Request Specifications</ButtonPrimary></Link>
-          <a href="/brochure/Montage_Company_Profile_2025.pdf" target="_blank" rel="noopener noreferrer">
-            <ButtonSecondary>View Full Product Portfolio</ButtonSecondary>
-          </a>
-        </div>
+        <p className="text-lg text-neutral-900">
+          Direct urea supply from established sources. Flexible programs tailored to Australian agricultural needs.
+        </p>
       </Section>
 
       <Section
         id="contact-form"
         eyebrow="Get in Touch"
-        title="Request Product Specifications"
+        title="Contact Our Australia Team"
         className="bg-neutral-50"
       >
         <p className="text-lg text-neutral-900 mb-8 max-w-2xl">
-          Leave your contact details and we&apos;ll send you detailed product specifications and discuss your seasonal program needs.
+          Leave your contact details and we&apos;ll discuss your seasonal program needs.
         </p>
         <form action="/api/contact" method="POST" className="max-w-xl">
           <div className="space-y-4">
@@ -142,30 +95,6 @@ export default function Page() {
       </Section>
 
       <PartnershipApproach />
-
-      <Section
-        id="technical-docs"
-        eyebrow="Resources"
-        title="Technical Documentation & Specifications"
-        className="bg-neutral-50"
-      >
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card">
-            <div className="text-brand-600 font-bold mb-2">Product Specifications</div>
-            <p className="text-sm text-neutral-900 mb-4">Detailed technical specs, origin certificates, and quality parameters for urea products.</p>
-            <Link href="#contact-form" className="text-sm font-medium text-brand-600 hover:text-brand-700">
-              Request Specs →
-            </Link>
-          </div>
-          <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card">
-            <div className="text-brand-600 font-bold mb-2">Full Product Portfolio</div>
-            <p className="text-sm text-neutral-900 mb-4">Complete fertilizer range including nitrogen, phosphate, and potash products.</p>
-            <a href="/brochure/Montage_Company_Profile_2025.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-brand-600 hover:text-brand-700">
-              Download Brochure →
-            </a>
-          </div>
-        </div>
-      </Section>
 
       <Section
         id="contact-australia"

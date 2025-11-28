@@ -9,12 +9,6 @@ export default function UreaHero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-brand-800/60 to-transparent" />
 
       <div className="relative container px-6 py-20 text-white md:py-28 min-h-[60vh] flex flex-col justify-center">
-        <div className="inline-block mb-4">
-          <span className="rounded-full bg-yellow-400/20 border border-yellow-400/30 px-4 py-1.5 text-sm font-semibold text-yellow-100">
-            🇦🇺 Australia 2026 Launch
-          </span>
-        </div>
-
         <h1 className="max-w-4xl font-inter text-4xl font-black leading-tight md:text-6xl">
           Urea for Australian Agriculture
         </h1>
@@ -24,11 +18,8 @@ export default function UreaHero() {
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4">
-          <Link href="#urea-focus">
-            <ButtonPrimary className="text-lg px-8 py-4">Configure Your Program</ButtonPrimary>
-          </Link>
           <Link href="#contact-form">
-            <ButtonSecondary className="text-lg px-8 py-4">Request Specifications</ButtonSecondary>
+            <ButtonPrimary className="text-lg px-8 py-4">Get in Touch</ButtonPrimary>
           </Link>
         </div>
 
