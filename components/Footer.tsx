@@ -14,6 +14,7 @@ export default function Footer() {
           <Link href="/marketing/terms" className="hover:text-brand-700">Terms of Use</Link>
           <Link href="/marketing/supplier-code" className="hover:text-brand-700">Supplier Code</Link>
           <Link href="/marketing/whistleblower" className="hover:text-brand-700">Whistleblower</Link>
+          <Link href="/marketing/modern-slavery" className="hover:text-brand-700">Modern Slavery</Link>
           <Link href="/safety" className="hover:text-brand-700">Safety & Compliance</Link>
         </div>
       </div>
