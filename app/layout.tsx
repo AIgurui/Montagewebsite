@@ -15,10 +15,10 @@ const ibmPlexSans = IBM_Plex_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Fertilizers. Intelligence. Reach.`,
+    default: `${site.name} — Global Fertilizer Trading`,
     template: `%s — ${site.name}`,
   },
-  description: 'Global fertilizer and energy trading with disciplined risk, transparent execution, and a partnership-first approach.',
+  description: 'Global fertilizer trading with disciplined risk, transparent execution, and a partnership-first approach.',
   icons: {
     icon: '/favicon.svg',
   },

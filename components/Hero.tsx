@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-brand-800/20 to-transparent" />
       <div className="relative container px-4 py-16 text-white sm:px-6 md:py-28 min-h-[60vh] md:min-h-[66vh] flex flex-col justify-center">
         <h1 className="max-w-3xl font-inter text-3xl font-black leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
-          Fertilizers. <span className="text-white/90">Intelligence.</span> Reach.
+          Global Fertilizer Trading
         </h1>
         <p className="mt-3 md:mt-4 max-w-2xl text-base sm:text-lg text-white/90 leading-relaxed">
           Global trading with local execution — we manage complex supply chains and deliver tailor‑made solutions with disciplined risk and transparent operations.

@@ -5,8 +5,8 @@ import AustraliaBanner from '@/components/AustraliaBanner'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Fertilizers. Intelligence. Reach.',
-  description: 'Global fertilizer and energy trading with disciplined risk, transparent execution, and a partnership-first approach.',
+  title: 'Global Fertilizer Trading',
+  description: 'Global fertilizer trading with disciplined risk, transparent execution, and a partnership-first approach.',
 }
 
 export default function Page() {
