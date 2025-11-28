@@ -11,7 +11,7 @@ export default function PartnershipApproach() {
     >
       <div className="grid gap-8 lg:grid-cols-2">
         <div>
-          <p className="text-lg text-neutral-900 mb-6">
+          <p className="text-base sm:text-lg text-black mb-6">
             We don&apos;t just deliver fertilizer—we build long-term partnerships that align with your business goals. Our approach is proven across global markets and tailored for Australian agricultural excellence.
           </p>
 
@@ -23,8 +23,8 @@ export default function PartnershipApproach() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-neutral-900">Seasonal Program Customization</h4>
-                <p className="text-sm text-neutral-900 mt-1">Configure delivery schedules around Australian planting and top-dressing windows for wheat, canola, and cotton cycles.</p>
+                <h4 className="font-semibold text-black">Seasonal Program Customization</h4>
+                <p className="text-sm text-black mt-1">Configure delivery schedules around Australian planting and top-dressing windows for wheat, canola, and cotton cycles.</p>
               </div>
             </div>
 
@@ -35,8 +35,8 @@ export default function PartnershipApproach() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-neutral-900">Risk Management Expertise</h4>
-                <p className="text-sm text-neutral-900 mt-1">Leverage our global trading desk for price risk management, hedge strategies, and market intelligence specific to Australian conditions.</p>
+                <h4 className="font-semibold text-black">Risk Management Expertise</h4>
+                <p className="text-sm text-black mt-1">Leverage our global trading desk for price risk management, hedge strategies, and market intelligence specific to Australian conditions.</p>
               </div>
             </div>
 
@@ -47,8 +47,8 @@ export default function PartnershipApproach() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-neutral-900">Local Execution, Global Network</h4>
-                <p className="text-sm text-neutral-900 mt-1">Benefit from our established Australian office combined with Dubai hub operations and Middle Eastern producer relationships.</p>
+                <h4 className="font-semibold text-black">Local Execution, Global Network</h4>
+                <p className="text-sm text-black mt-1">Benefit from our established Australian office combined with Dubai hub operations and Middle Eastern producer relationships.</p>
               </div>
             </div>
 
@@ -59,8 +59,8 @@ export default function PartnershipApproach() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-neutral-900">Transparent Operations</h4>
-                <p className="text-sm text-neutral-900 mt-1">Full visibility on pricing benchmarks, supply chain status, vessel tracking, and documentation throughout the program lifecycle.</p>
+                <h4 className="font-semibold text-black">Transparent Operations</h4>
+                <p className="text-sm text-black mt-1">Full visibility on pricing benchmarks, supply chain status, vessel tracking, and documentation throughout the program lifecycle.</p>
               </div>
             </div>
           </div>
@@ -68,19 +68,19 @@ export default function PartnershipApproach() {
 
         <div className="space-y-6">
           <div className="rounded-xl border-2 border-brand-600 bg-gradient-to-br from-brand-50 to-white p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-brand-900 mb-4">Proven Global Experience</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">Proven Global Experience</h3>
             <div className="space-y-4">
               <div>
                 <div className="text-sm font-semibold text-brand-700 uppercase tracking-wide mb-1">Africa</div>
-                <p className="text-sm text-neutral-900">Multi-year supply programs supporting agricultural development</p>
+                <p className="text-sm text-black">Multi-year supply programs supporting agricultural development</p>
               </div>
               <div>
                 <div className="text-sm font-semibold text-brand-700 uppercase tracking-wide mb-1">Mexico</div>
-                <p className="text-sm text-neutral-900">200k+ MT consignment model delivering seasonal flexibility</p>
+                <p className="text-sm text-black">200k+ MT consignment model delivering seasonal flexibility</p>
               </div>
               <div>
                 <div className="text-sm font-semibold text-brand-700 uppercase tracking-wide mb-1">Latin America</div>
-                <p className="text-sm text-neutral-900">Established distribution networks across multiple markets</p>
+                <p className="text-sm text-black">Established distribution networks across multiple markets</p>
               </div>
             </div>
           </div>
