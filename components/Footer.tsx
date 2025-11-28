@@ -9,7 +9,7 @@ export default function Footer() {
         <p>© {year} {site.name}. All rights reserved.</p>
         <div className="flex items-center gap-5">
           <Link href="/marketing/contact" className="hover:text-brand-700">Contact</Link>
-          <a href="/brochure.pdf" className="hover:text-brand-700" target="_blank">Company Brochure</a>
+          <a href="/brochure/Montage_Products.pdf" className="hover:text-brand-700" target="_blank">Company Brochure</a>
           <Link href="/safety" className="hover:text-brand-700">Safety & Compliance</Link>
         </div>
       </div>

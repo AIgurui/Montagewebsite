@@ -23,7 +23,7 @@ export default function Page() {
         <p className="text-neutral-900">
           For our complete product range including refined petroleum products, aviation fuels, and more, please see our{' '}
           <a
-            href="/brochure.pdf"
+            href="/brochure/Montage_Products.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-brand-600 font-semibold hover:text-brand-700 underline"
